@@ -3757,7 +3757,13 @@ const TECHZEN_FOOTER = `
           // Ancestors only get parent/ancestor classes, not active classes
           let ancestor = parent.parentElement.closest('li');
           while (ancestor) {
-            ancestor.classList.add('current-menu-ancestor', 'current-menu-parent', 'current_page_parent', 'current_page_ancestor');
+            // Do not propagate active parent highlighting to structural "Pages" grouping items
+            let textEl = ancestor.querySelector('.menu-item-link > .menu-item-text') || ancestor.querySelector('.menu-item-text');
+            let isPages = textEl && textEl.textContent.trim().toLowerCase() === 'pages';
+            
+            if (!isPages) {
+              ancestor.classList.add('current-menu-ancestor', 'current-menu-parent', 'current_page_parent', 'current_page_ancestor');
+            }
             ancestor = ancestor.parentElement.closest('li');
           }
         }
