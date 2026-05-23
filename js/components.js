@@ -3729,23 +3729,40 @@ const TECHZEN_FOOTER = `
   // Add active classes to the matching menu item based on filename
   document.querySelectorAll('.rstb-header .menu-item a').forEach(a => {
     let href = a.getAttribute('href');
-    if (href) {
-      // Normalize href for comparison (remove trailing slashes, leading slashes, etc.)
-      let hrefPage = href.split('/').pop() || 'index.html';
-      if (hrefPage === '') hrefPage = 'index.html';
+    if (href && href !== '#' && !href.startsWith('tel:') && !href.startsWith('mailto:')) {
+      // Clean query parameters and hash fragments
+      let cleanHref = href.split('#')[0].split('?')[0];
+      
+      // Strip trailing slash
+      if (cleanHref.endsWith('/')) {
+        cleanHref = cleanHref.slice(0, -1);
+      }
+      
+      // Get the last segment of the path
+      let hrefPage = cleanHref.split('/').pop() || 'index.html';
+      
+      // If the clean URL points to the empty root or base it-solutions directory, map to index.html
+      if (hrefPage === '' || hrefPage === 'it-solutions') {
+        hrefPage = 'index.html';
+      }
+      
       if (hrefPage.startsWith('/')) hrefPage = hrefPage.substring(1);
       
       if (hrefPage === page) {
         let parent = a.parentElement;
-        while (parent && parent.tagName === 'LI') {
+        if (parent && parent.tagName === 'LI') {
+          // Direct parent LI gets the exact active classes
           parent.classList.add('current-menu-item', 'current_page_item');
+          
+          // Ancestors only get parent/ancestor classes, not active classes
           let ancestor = parent.parentElement.closest('li');
-          if (ancestor) {
+          while (ancestor) {
             ancestor.classList.add('current-menu-ancestor', 'current-menu-parent', 'current_page_parent', 'current_page_ancestor');
+            ancestor = ancestor.parentElement.closest('li');
           }
-          parent = ancestor;
         }
       }
     }
   });
 })();
+
