@@ -1,9 +1,9 @@
 /* ==========================================================================
-   TechZen IT Solutions - components.js
+   lucidecore IT Solutions - components.js
    Dynamic Header & Footer Injector
    ========================================================================== */
 
-const TECHZEN_HEADER = `
+const LUCIDECORE_HEADER = `
 			<div data-elementor-type="wp-post" data-elementor-id="20" class="elementor elementor-20">
 				<div class="elementor-element elementor-element-287118d6 e-con-full e-flex e-con e-parent"
 					data-id="287118d6" data-element_type="container" data-e-type="container">
@@ -196,7 +196,7 @@ const TECHZEN_HEADER = `
 
 														<a href="mailto:bustarconsulting@gmail.com">
 															<span class="des">
-																Send mail: techzen@gmail.com </span>
+																Send mail: lucidecore@gmail.com </span>
 														</a>
 													</div>
 
@@ -1297,7 +1297,7 @@ const TECHZEN_HEADER = `
 			</div>
 		`;
 
-const TECHZEN_FOOTER = `
+const LUCIDECORE_FOOTER = `
 			<div data-elementor-type="wp-post" data-elementor-id="35" class="elementor elementor-35">
 				<div class="elementor-element elementor-element-5f633736 e-con-full e-flex e-con e-parent"
 					data-id="5f633736" data-element_type="container" data-e-type="container"
@@ -1328,7 +1328,7 @@ const TECHZEN_FOOTER = `
 												<div class="title-inner">
 												</div>
 												<div class="descripti">
-													Techzen solution specializes in helping startups and enterprises
+													Lucidecore solution specializes in helping startups and enterprises
 													craft strate solutions donec eu magna. </div>
 											</div>
 										</div>
@@ -1881,13 +1881,13 @@ const TECHZEN_FOOTER = `
   // 1. Inject Header
   const headerEl = document.querySelector('header.rstb-header');
   if (headerEl) {
-    headerEl.innerHTML = TECHZEN_HEADER;
+    headerEl.innerHTML = LUCIDECORE_HEADER;
   }
 
   // 2. Inject Footer
   const footerEl = document.querySelector('footer.rstb-footer');
   if (footerEl) {
-    footerEl.innerHTML = TECHZEN_FOOTER;
+    footerEl.innerHTML = LUCIDECORE_FOOTER;
   }
 
   // 3. Set Active Navigation Item

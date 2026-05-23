@@ -10,7 +10,7 @@
   font-display: block;
 }
 
-[class^="techzen-custom-icon"], [class*=" techzen-custom-icon"] {
+[class^="lucidecore-custom-icon"], [class*=" lucidecore-custom-icon"] {
   font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
@@ -22,21 +22,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.techzen-custom-icon-arrow2-left:before {
+.lucidecore-custom-icon-arrow2-left:before {
   content: "\e900";
 }
-.techzen-custom-icon-right:before {
+.lucidecore-custom-icon-right:before {
   content: "\e901";
 }
-.techzen-custom-icon-left:before {
+.lucidecore-custom-icon-left:before {
   content: "\e902";
 }
-.techzen-custom-icon-right:before {
+.lucidecore-custom-icon-right:before {
   content: "\e903";
 }
-.techzen-custom-icon-left:before {
+.lucidecore-custom-icon-left:before {
   content: "\e904";
 }
-.techzen-custom-icon-right:before {
+.lucidecore-custom-icon-right:before {
   content: "\e905";
 }

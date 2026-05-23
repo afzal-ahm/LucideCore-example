@@ -2,7 +2,7 @@
 *
 * --------------------------------------------------------------------
 *
-* Template : Techzen - Construction WordPress Theme
+* Template : Lucidecore - Construction WordPress Theme
 * Author : rs-theme
 * Author URI : http://www.rstheme.com
 *
