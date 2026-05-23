@@ -1,0 +1,445 @@
+.rs-ajax-post-load-parent .rs-ajax-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 50px;
+  border-style: solid;
+  border-color: var(--borderColor);
+  border-width: 0px;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rs-ajax-post-load-parent .rs-ajax-filter.contents-sticky > div {
+  flex-direction: column;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  flex-wrap: inherit;
+  gap: inherit;
+  row-gap: inherit;
+  column-gap: inherit;
+}
+.rs-ajax-post-load-parent .rs-ajax-filter.show-absolute-border button::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--primaryColor);
+  opacity: 0;
+  transition: var(--transition);
+}
+.rs-ajax-post-load-parent .rs-ajax-filter button {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: var(--titleColor);
+  transition: var(--transition);
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.rs-ajax-post-load-parent .rs-ajax-filter button:hover, .rs-ajax-post-load-parent .rs-ajax-filter button.active {
+  color: var(--primaryColor);
+}
+.rs-ajax-post-load-parent .rs-ajax-filter button.active::after {
+  opacity: 1;
+}
+
+.rs-ajax-post-load {
+  width: 100%;
+}
+.rs-ajax-post-load.rs-addon-grid.rs-loading .post-wrapper {
+  overflow-x: hidden;
+}
+.rs-ajax-post-load.rs-addon-grid.rs-loading .post-wrapper:before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: #eee;
+  z-index: 2;
+}
+.rs-ajax-post-load.rs-addon-grid.rs-loading .post-wrapper:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  animation: rsAjaxLoadingEffectSkeleton 1.2s infinite;
+  z-index: 3;
+}
+.rs-ajax-post-load.rs-addon-slider.rs-loading {
+  position: relative;
+}
+.rs-ajax-post-load.rs-addon-slider.rs-loading:after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.rs-ajax-post-load.rs-addon-slider.rs-loading .loading_dot {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  border-radius: 50%;
+  background: var(--whiteColor);
+  z-index: 3;
+  animation: rsAjaxLoadingEffectOverlay 2s infinite;
+}
+.rs-ajax-post-load.rs-addon-slider.rs-loading .loading_dot:after {
+  position: absolute;
+  content: "";
+  top: 70%;
+  right: 70%;
+  background: var(--titleColor);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.rs-ajax-post-load .post-img {
+  position: relative;
+  overflow: hidden;
+}
+.rs-ajax-post-load .post-img img {
+  width: 100%;
+  height: auto;
+  transition: 0.3s;
+}
+.rs-ajax-post-load .post-img::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  opacity: 0.4;
+  background: var(--titleColor);
+  pointer-events: none;
+  transition: var(--transition);
+}
+.rs-ajax-post-load .post-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.rs-ajax-post-load .post-content .btn-part a {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--bodyFont);
+  color: var(--whiteColor);
+  gap: 10px;
+}
+.rs-ajax-post-load .post-content .btn-part a svg {
+  width: 15px;
+  height: 15px;
+}
+.rs-ajax-post-load .post-content .btn-part a svg path {
+  fill: var(--whiteColor);
+  transition: var(--transition);
+}
+.rs-ajax-post-load .post-content .btn-part a i {
+  color: var(--whiteColor);
+  font-size: 15px;
+  transition: var(--transition);
+}
+.rs-ajax-post-load .post-content .btn-part a em {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  line-height: 20px;
+  flex-shrink: 0;
+}
+.rs-ajax-post-load .post-content .btn-part a em > * {
+  height: inherit;
+  width: inherit;
+  line-height: inherit;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: var(--transition);
+}
+.rs-ajax-post-load .post-content .btn-part a em > *:last-child {
+  transform: translateX(-150%);
+}
+.rs-ajax-post-load .post-content .btn-part a:hover {
+  color: var(--primaryColor);
+}
+.rs-ajax-post-load .post-content .btn-part a:hover svg path {
+  fill: var(--primaryColor);
+}
+.rs-ajax-post-load .post-content .btn-part a:hover i {
+  color: var(--whiteColor);
+}
+.rs-ajax-post-load .post-content .btn-part a.anim-dir-bottom em > *:last-child {
+  transform: translateY(-150%);
+}
+.rs-ajax-post-load .post-content .btn-part a.anim-dir-top em > *:last-child {
+  transform: translateY(150%);
+}
+.rs-ajax-post-load .post-content .btn-part a.anim-dir-left em > *:last-child {
+  transform: translateX(150%);
+}
+.rs-ajax-post-load .post-content .btn-part a.anim-dir-angle em > *:last-child {
+  transform: translate(-150%, 150%);
+}
+.rs-ajax-post-load .post-content:hover .btn-part a em > * {
+  transform: translateX(150%);
+}
+.rs-ajax-post-load .post-content:hover .btn-part a em > *:last-child {
+  transform: translateX(0) !important;
+}
+.rs-ajax-post-load .post-content:hover .btn-part a.anim-dir-bottom em > * {
+  transform: translateY(150%);
+}
+.rs-ajax-post-load .post-content:hover .btn-part a.anim-dir-top em > * {
+  transform: translateY(-150%);
+}
+.rs-ajax-post-load .post-content:hover .btn-part a.anim-dir-left em > * {
+  transform: translateX(-150%);
+}
+.rs-ajax-post-load .post-content:hover .btn-part a.anim-dir-angle em > * {
+  transform: translate(150%, -150%);
+}
+.rs-ajax-post-load .rs-loadmore-btn {
+  border-radius: 10px;
+  padding: 14px 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+.rs-ajax-post-load .rs-loadmore-btn svg {
+  width: 18px;
+  height: 18px;
+}
+.rs-ajax-post-load .rs-loadmore-btn svg path {
+  fill: var(--whiteColor);
+  transition: var(--transition);
+}
+.rs-ajax-post-load .rs-loadmore-btn i {
+  font-size: 18px;
+  color: var(--whiteColor);
+  transition: var(--transition);
+}
+.rs-ajax-post-load .rs-loadmore-btn.rs-btn-loading i, .rs-ajax-post-load .rs-loadmore-btn.rs-btn-loading svg {
+  animation: rsAjaxLoadMoreBtn 1s linear infinite;
+}
+.rs-ajax-post-load .rs-loadmore-btn.load-complete {
+  display: none;
+}
+.rs-ajax-post-load .grid-item .post-wrapper .post-content .post-excerpt.expand-effect {
+  scale: 1 0;
+  opacity: 0;
+  transition: var(--transition);
+  overflow: hidden;
+}
+.rs-ajax-post-load .grid-item .post-wrapper .post-content .post-title {
+  margin: 20px 0 25px;
+  padding-bottom: 20px;
+  position: relative;
+  --titleLineW: 146px;
+  --titleLineH: 1px;
+  --titleLineColor: var(--whiteColor);
+}
+.rs-ajax-post-load .grid-item .post-wrapper .post-content .post-title a {
+  color: var(--whiteColor);
+}
+.rs-ajax-post-load .grid-item .post-wrapper .post-content .post-title a:hover {
+  color: var(--primaryColor);
+}
+.rs-ajax-post-load .grid-item .post-wrapper .post-content .post-title:after, .rs-ajax-post-load .grid-item .post-wrapper .post-content .post-title:before {
+  position: absolute;
+  content: "";
+  width: var(--titleLineW);
+  height: var(--titleLineH);
+  bottom: 0;
+  left: 0;
+  background: var(--titleLineColor);
+  transition: var(--transition);
+  opacity: 0.2;
+}
+.rs-ajax-post-load .grid-item .post-wrapper .post-content .post-title:before {
+  width: calc(var(--titleLineW) / 2);
+  opacity: 1;
+}
+.rs-ajax-post-load .grid-item:hover .post-content .post-title:before {
+  width: var(--titleLineW);
+}
+.rs-ajax-post-load .grid-item.active .post-wrapper .post-content .post-excerpt.expand-effect, .rs-ajax-post-load .grid-item.swiper-slide-active .post-wrapper .post-content .post-excerpt.expand-effect {
+  scale: 1;
+  opacity: 1;
+  height: var(--desc-height) !important;
+  margin-bottom: 20px;
+}
+.rs-ajax-post-load.style-1 .post-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.rs-ajax-post-load.style-1 .post-wrapper .post-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 30px 30px;
+  transition: var(--transition);
+  opacity: 0;
+}
+.rs-ajax-post-load.style-1 .post-wrapper .post-content .post-title {
+  margin-bottom: 15px;
+}
+.rs-ajax-post-load.style-1 .post-wrapper .post-content .post-title a {
+  color: var(--whiteColor);
+}
+.rs-ajax-post-load.style-1 .post-wrapper .post-content .post-title a:hover {
+  color: var(--primaryColor);
+}
+.rs-ajax-post-load.style-1 .post-wrapper .post-content .post-excerpt {
+  color: var(--whiteColor);
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+.rs-ajax-post-load.style-1 .post-wrapper .post-content .animated-border {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--secondaryColor);
+  margin-top: 20px;
+}
+.rs-ajax-post-load.style-1 .post-wrapper .post-content .animated-border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--primaryColor);
+  transition: 0.3s linear;
+}
+.rs-ajax-post-load.style-1 .post-wrapper .post-category {
+  color: var(--whiteColor);
+}
+.rs-ajax-post-load.style-1 .post-wrapper .post-category a {
+  color: var(--whiteColor);
+}
+.rs-ajax-post-load.style-1 .post-wrapper .post-category a:hover {
+  color: var(--primaryColor);
+}
+.rs-ajax-post-load.style-1 .post-wrapper:hover .post-img img {
+  transform: scale(1.1);
+}
+.rs-ajax-post-load.style-1 .post-wrapper:hover .post-content {
+  opacity: 1;
+}
+.rs-ajax-post-load.style-1 .post-wrapper:hover .animated-border::after {
+  width: 100%;
+}
+.rs-ajax-post-load.style-1 .grid-item.swiper-slide-active .post-content {
+  opacity: 1;
+}
+.rs-ajax-post-load.style-2.rs-addon-slider {
+  transition: var(--transition);
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.rs-ajax-post-load.style-2 .grid-item.swiper-slide .post-wrapper {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 500px;
+}
+.rs-ajax-post-load.style-2 .grid-item.swiper-slide .post-wrapper .post-img {
+  display: none;
+}
+.rs-ajax-post-load.style-2 .grid-item.active .post-wrapper .post-content, .rs-ajax-post-load.style-2 .grid-item.swiper-slide-active .post-wrapper .post-content {
+  backdrop-filter: blur(9px);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.rs-ajax-post-load.style-2 .grid-item.active .post-wrapper .post-content .post-category, .rs-ajax-post-load.style-2 .grid-item.swiper-slide-active .post-wrapper .post-content .post-category {
+  opacity: 1;
+  pointer-events: auto;
+}
+.rs-ajax-post-load.style-2 .post-wrapper {
+  position: relative;
+}
+.rs-ajax-post-load.style-2 .post-wrapper .post-img img {
+  object-fit: cover;
+  object-position: center;
+  height: 500px;
+}
+.rs-ajax-post-load.style-2 .post-wrapper .post-content {
+  position: absolute;
+  inset: 0;
+  top: auto;
+  padding: 30px;
+  color: var(--whiteColor);
+  transition: var(--transition);
+}
+.rs-ajax-post-load.style-2 .post-wrapper .post-content .post-category {
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.rs-ajax-post-load.style-2 .post-wrapper .post-content .post-category .separator {
+  display: none;
+}
+.rs-ajax-post-load.style-2 .post-wrapper .post-content .post-category a {
+  color: var(--whiteColor);
+  display: inline-block;
+  padding: 0px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  transition: var(--transition);
+  border-radius: 30px;
+  font-size: 15px;
+}
+.rs-ajax-post-load.style-2 .post-wrapper .post-content .post-category a:hover {
+  background: var(--whiteColor);
+  color: var(--primaryColor);
+  border-color: var(--whiteColor);
+}
+@keyframes rsAjaxLoadMoreBtn {
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes rsAjaxLoadingEffectSkeleton {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes rsAjaxLoadingEffectOverlay {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

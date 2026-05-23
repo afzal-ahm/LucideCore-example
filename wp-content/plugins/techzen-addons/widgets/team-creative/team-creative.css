@@ -1,0 +1,199 @@
+.rs-team-creative {
+  display: flex;
+  gap: 100px;
+}
+.rs-team-creative > * {
+  width: 100%;
+}
+.rs-team-creative .social-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--primaryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  line-height: 1;
+  padding: 10px;
+  border-radius: 0 0 5px 0;
+}
+.rs-team-creative .social-links a {
+  color: var(--primaryForegroundColor);
+  font-size: 16px;
+}
+.rs-team-creative .social-links a i {
+  font-size: inherit;
+}
+.rs-team-creative .thumb-wrapper {
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--shadeColor);
+  max-width: 470px;
+}
+.rs-team-creative .thumb-wrapper .thumb-item {
+  opacity: 0;
+  transition: var(--transition);
+  position: absolute;
+  inset: 0;
+  background-size: cover !important;
+  background-position: center !important;
+  scale: 1.1;
+}
+.rs-team-creative .thumb-wrapper .thumb-item.active {
+  opacity: 1;
+  scale: 1;
+  z-index: 2;
+}
+.rs-team-creative .team-item {
+  position: relative;
+  padding: 27px 0 20px;
+  border-bottom: 1px solid var(--borderColor);
+  transition: var(--transition);
+}
+.rs-team-creative .team-item:first-child {
+  padding-top: 0;
+}
+.rs-team-creative .team-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.rs-team-creative .team-item .content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  transition: var(--transition);
+}
+.rs-team-creative .team-item .member-name,
+.rs-team-creative .team-item .member-designation,
+.rs-team-creative .team-item .member-designation a,
+.rs-team-creative .team-item .details-btn {
+  transition: var(--transition);
+}
+.rs-team-creative .team-item .name-designation {
+  flex-grow: 1;
+}
+.rs-team-creative .team-item .member-name {
+  margin: 0 0 5px;
+}
+.rs-team-creative .team-item .member-name a {
+  color: inherit;
+}
+.rs-team-creative .team-item .member-designation {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+}
+.rs-team-creative .team-item .details-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 22px;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+}
+.rs-team-creative .team-item .details-btn svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+.rs-team-creative .team-item .details-btn em {
+  position: relative;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+}
+.rs-team-creative .team-item .details-btn em i,
+.rs-team-creative .team-item .details-btn em svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: var(--transition);
+}
+.rs-team-creative .team-item .details-btn em i:last-child,
+.rs-team-creative .team-item .details-btn em svg:last-child {
+  color: var(--primaryColor);
+  transform: translateX(-150%);
+}
+.rs-team-creative .team-item .details-btn.anim-dir-bottom em i:last-child,
+.rs-team-creative .team-item .details-btn.anim-dir-bottom em svg:last-child {
+  transform: translateY(-150%);
+}
+.rs-team-creative .team-item .details-btn.anim-dir-top em i:last-child,
+.rs-team-creative .team-item .details-btn.anim-dir-top em svg:last-child {
+  transform: translateY(150%);
+}
+.rs-team-creative .team-item .details-btn.anim-dir-left em i:last-child,
+.rs-team-creative .team-item .details-btn.anim-dir-left em svg:last-child {
+  transform: translateX(150%);
+}
+.rs-team-creative .team-item .details-btn.anim-dir-angle em i:last-child,
+.rs-team-creative .team-item .details-btn.anim-dir-angle em svg:last-child {
+  transform: translate(-150%, 150%);
+}
+.rs-team-creative .team-item .animated-border {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--secondaryColor);
+  margin-top: 20px;
+}
+.rs-team-creative .team-item .animated-border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--primaryColor);
+  transition: 0.3s linear;
+}
+.rs-team-creative .team-item.active .member-name, .rs-team-creative .team-item:hover .member-name {
+  color: var(--primaryColor);
+}
+.rs-team-creative .team-item.active .member-name a, .rs-team-creative .team-item:hover .member-name a {
+  color: var(--primaryColor);
+}
+.rs-team-creative .team-item.active .details-btn, .rs-team-creative .team-item:hover .details-btn {
+  color: var(--primaryColor);
+}
+.rs-team-creative .team-item.active .details-btn em i,
+.rs-team-creative .team-item.active .details-btn em svg, .rs-team-creative .team-item:hover .details-btn em i,
+.rs-team-creative .team-item:hover .details-btn em svg {
+  transform: translateX(150%);
+}
+.rs-team-creative .team-item.active .details-btn em i:last-child,
+.rs-team-creative .team-item.active .details-btn em svg:last-child, .rs-team-creative .team-item:hover .details-btn em i:last-child,
+.rs-team-creative .team-item:hover .details-btn em svg:last-child {
+  transform: translateX(0) !important;
+}
+.rs-team-creative .team-item.active .details-btn.anim-dir-bottom em i,
+.rs-team-creative .team-item.active .details-btn.anim-dir-bottom em svg, .rs-team-creative .team-item:hover .details-btn.anim-dir-bottom em i,
+.rs-team-creative .team-item:hover .details-btn.anim-dir-bottom em svg {
+  transform: translateY(150%);
+}
+.rs-team-creative .team-item.active .details-btn.anim-dir-top em i,
+.rs-team-creative .team-item.active .details-btn.anim-dir-top em svg, .rs-team-creative .team-item:hover .details-btn.anim-dir-top em i,
+.rs-team-creative .team-item:hover .details-btn.anim-dir-top em svg {
+  transform: translateY(-150%);
+}
+.rs-team-creative .team-item.active .details-btn.anim-dir-left em i,
+.rs-team-creative .team-item.active .details-btn.anim-dir-left em svg, .rs-team-creative .team-item:hover .details-btn.anim-dir-left em i,
+.rs-team-creative .team-item:hover .details-btn.anim-dir-left em svg {
+  transform: translateX(-150%);
+}
+.rs-team-creative .team-item.active .details-btn.anim-dir-angle em i,
+.rs-team-creative .team-item.active .details-btn.anim-dir-angle em svg, .rs-team-creative .team-item:hover .details-btn.anim-dir-angle em i,
+.rs-team-creative .team-item:hover .details-btn.anim-dir-angle em svg {
+  transform: translate(150%, -150%);
+}
+.rs-team-creative .team-item.active .animated-border::after, .rs-team-creative .team-item:hover .animated-border::after {
+  width: 100%;
+}

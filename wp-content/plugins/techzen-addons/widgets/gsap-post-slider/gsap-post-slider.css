@@ -1,0 +1,66 @@
+.rs-gsap-post-slider .slider-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.rs-gsap-post-slider .slider-wrapper .post-item {
+  flex-shrink: 0;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .post-img {
+  overflow: hidden;
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .post-img img {
+  width: 100%;
+  height: auto;
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper .post-title {
+  margin: 20px 0;
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper .post-title a {
+  color: var(--titleColor);
+  transition: var(--transition);
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper .post-title a:hover {
+  color: var(--primaryColor);
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper .post-desc-text {
+  transition: var(--transition);
+  margin-bottom: 20px;
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper .btn-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--titleColor);
+  gap: 8px;
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper .btn-wrapper a svg {
+  width: 18px;
+  height: 18px;
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper .btn-wrapper a svg path {
+  fill: var(--titleColor);
+  transition: var(--transition);
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper .btn-wrapper a i {
+  font-size: 18px;
+  color: var(--titleColor);
+  transition: var(--transition);
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper .btn-wrapper a:hover {
+  color: var(--primaryColor);
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper .btn-wrapper a:hover i {
+  color: var(--primaryColor);
+}
+.rs-gsap-post-slider .slider-wrapper .post-item .content-wrapper .btn-wrapper a:hover svg path {
+  fill: var(--primaryColor);
+}

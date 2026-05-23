@@ -1,0 +1,29 @@
+.rs-logo-slider .swiper-wrapper .swiper-slide {
+  height: auto;
+}
+.rs-logo-slider .logo-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.rs-logo-slider .logo-item-wrapper .image-wrapper {
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.rs-logo-slider .logo-item-wrapper .image-wrapper img {
+  transition: var(--transition);
+  width: 100%;
+  height: auto;
+}
+.rs-logo-slider .logo-item-wrapper .content-wrapper {
+  width: 100%;
+}
+.rs-logo-slider .logo-item-wrapper .content-wrapper .title {
+  margin: 0 0 10px 0;
+  transition: var(--transition);
+}
+.rs-logo-slider .logo-item-wrapper .content-wrapper .descri {
+  transition: var(--transition);
+}

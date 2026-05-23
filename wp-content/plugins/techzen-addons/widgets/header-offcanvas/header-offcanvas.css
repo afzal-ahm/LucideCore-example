@@ -1,0 +1,143 @@
+.rs-offcanvas-area a.nav-expander {
+  background: transparent;
+  color: var(--titleColor);
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  height: auto;
+  margin-right: 0;
+  padding: 0;
+  right: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  top: 0;
+  transition: 0.3s ease-in-out 0s;
+  width: auto;
+  z-index: 12;
+  transition: 0.3s ease-in-out 0s;
+  -webkit-transition: 0.3s ease-in-out 0s;
+  -moz-transition: 0.3s ease-in-out 0s;
+  -o-transition: 0.3s ease-in-out 0s;
+}
+.rs-offcanvas-area ul {
+  margin: 0;
+  padding: 0;
+}
+.rs-offcanvas-area ul .nav-link {
+  cursor: pointer;
+  padding: 0;
+  line-height: 16px;
+}
+.rs-offcanvas-area nav.right_menu_togle {
+  background: var(--shadeColor);
+  display: block;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  right: -400px;
+  top: 0;
+  width: 100%;
+  max-width: 400px;
+  z-index: 999999;
+  transition: right 0.3s ease-in-out 0s;
+  -webkit-transition: right 0.3s ease-in-out 0s;
+  -moz-transition: right 0.3s ease-in-out 0s;
+  -o-transition: right 0.3s ease-in-out 0s;
+  padding: 40px;
+}
+.rs-offcanvas-area .nav-expander i {
+  font-size: 24px;
+  color: var(--titleColor);
+  transition: var(--transition);
+}
+.rs-offcanvas-area .nav-expander svg path {
+  fill: var(--titleColor);
+  transition: var(--transition);
+}
+
+body .rsoffwrap {
+  cursor: url(close.png), auto;
+  width: 100%;
+  left: 100%;
+  transition: all 0.8s ease-out 0s;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  opacity: 0.9;
+  z-index: 99999;
+  background-color: var(--shadeColor);
+}
+
+body.nav-expanded {
+  margin-left: 0em;
+  transition: right 0.4s ease-in-out 0s;
+  -webkit-transition: right 0.4s ease-in-out 0s;
+  -moz-transition: right 0.4s ease-in-out 0s;
+  -o-transition: right 0.4s ease-in-out 0s;
+}
+
+body.nav-expanded nav {
+  right: 0 !important;
+}
+
+body.nav-expanded .rsoffwrap {
+  left: 0%;
+  transition: all 0.8s ease-out 0s;
+}
+
+.rs-offcanvas-area a.nav-expander.line {
+  width: 20px;
+  height: 16px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: color 0.2s ease-out;
+}
+.rs-offcanvas-area a.nav-expander.line span {
+  width: 28px;
+  height: 2px;
+  background: #ffffff;
+  display: inline-block;
+  transition: color 0.2s ease-out;
+  margin: 0 auto;
+  margin-right: auto;
+  margin-right: 0;
+}
+.rs-offcanvas-area a.nav-expander.line span:nth-child(1) {
+  width: 20px;
+  transition: all 0.3s linear;
+}
+.rs-offcanvas-area a.nav-expander.line span:nth-child(2) {
+  width: 15px;
+  transition: all 0.3s linear;
+}
+.rs-offcanvas-area a.nav-expander.line span:nth-child(3) {
+  width: 20px;
+  transition: all 0.3s linear;
+}
+.rs-offcanvas-area a.nav-expander.line:hover span {
+  animation: qode-draw 0.8s cubic-bezier(0.44, 1.1, 0.53, 0.99) 1 forwards;
+}
+.rs-offcanvas-area a.nav-expander.line:hover span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.rs-offcanvas-area a.nav-expander.line:hover span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes qode-draw {
+  0%, 100% {
+    -webkit-clip-path: inset(-2px 0);
+    clip-path: inset(-2px 0);
+  }
+  42% {
+    -webkit-clip-path: inset(-2px 0 -2px 100%);
+    clip-path: inset(-2px 0 -2px 100%);
+  }
+  43% {
+    -webkit-clip-path: inset(-2px 100% -2px 0);
+    clip-path: inset(-2px 100% -2px 0);
+  }
+}

@@ -1,0 +1,385 @@
+.rs-service-list .services-inner {
+  padding: 40px 30px;
+  background-color: var(--shadeColor);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+}
+.rs-service-list .services-inner .count_number {
+  transition: var(--transition);
+}
+.rs-service-list .services-inner .feature_img {
+  position: relative;
+}
+.rs-service-list .services-inner .feature_img:not(.media-aside) {
+  position: absolute;
+  content: "";
+  right: 50px;
+  bottom: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all linear 0.4s !important;
+  z-index: 1;
+}
+.rs-service-list .services-inner .feature_img:not(.media-aside) img {
+  width: 280px;
+  height: auto;
+}
+.rs-service-list .services-inner .feature_img.media-aside {
+  flex-shrink: 0;
+}
+.rs-service-list .services-inner .feature_img.media-aside img {
+  object-fit: cover;
+  object-position: center;
+  transition: var(--transition);
+}
+.rs-service-list .services-inner .feature_img.clip-path-enable > img {
+  clip-path: polygon(88% 0%, 100% 50%, 88% 100%, 0% 100%, 12% 50%, 0% 0%);
+}
+.rs-service-list .services-inner .feature_img .overlay-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.5s;
+}
+.rs-service-list .services-inner .feature_img .overlay-image img {
+  max-width: 100%;
+  height: auto !important;
+  width: 260px !important;
+}
+.rs-service-list .services-inner .icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.rs-service-list .services-inner .icon-wrap svg {
+  width: 60px;
+  height: 60px;
+}
+.rs-service-list .services-inner .icon-wrap svg path {
+  fill: var(--primaryColor);
+  transition: var(--transition);
+}
+.rs-service-list .services-inner .icon-wrap i {
+  font-size: 60px;
+  color: var(--primaryColor);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.rs-service-list .services-inner .icon-wrap i:after {
+  font-size: inherit;
+  line-height: inherit;
+}
+.rs-service-list .services-inner .title {
+  margin-bottom: 0px;
+  transition: var(--transition);
+}
+.rs-service-list .services-inner .subinfo {
+  transition: var(--transition);
+}
+.rs-service-list .services-inner .desc-text {
+  transition: var(--transition);
+  color: var(--bodyColor);
+}
+.rs-service-list .services-inner .desc-text span {
+  display: block;
+  color: var(--titleColor);
+  margin-top: 10px;
+  line-height: 26px;
+}
+.rs-service-list .services-inner .btn-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.rs-service-list .services-inner .btn-part .btn-icon {
+  transition: var(--transition);
+}
+.rs-service-list .services-inner .btn-part .btn-icon em {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  line-height: 20px;
+  flex-shrink: 0;
+}
+.rs-service-list .services-inner .btn-part .btn-icon em > * {
+  height: inherit;
+  width: inherit;
+  line-height: inherit;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: var(--transition);
+}
+.rs-service-list .services-inner .btn-part .btn-icon em > *:last-child {
+  transform: translateX(-150%);
+}
+.rs-service-list .services-inner .btn-part .btn-icon em svg path {
+  fill: var(--primaryForegroundColor);
+  transition: var(--transition);
+}
+.rs-service-list .services-inner .btn-part .btn-icon em i {
+  color: var(--primaryForegroundColor);
+}
+.rs-service-list .services-inner .btn-part .btn-icon.anim-dir-bottom em > *:last-child {
+  transform: translateY(-150%);
+}
+.rs-service-list .services-inner .btn-part .btn-icon.anim-dir-top em > *:last-child {
+  transform: translateY(150%);
+}
+.rs-service-list .services-inner .btn-part .btn-icon.anim-dir-left em > *:last-child {
+  transform: translateX(150%);
+}
+.rs-service-list .services-inner .btn-part .btn-icon.anim-dir-angle em > *:last-child {
+  transform: translate(-150%, 150%);
+}
+.rs-service-list .services-inner .btn-part.btn-rtl.btn-row-reverse {
+  flex-direction: row !important;
+}
+.rs-service-list .services-inner .btn-part.btn-rtl.btn-row {
+  flex-direction: row-reverse !important;
+}
+.rs-service-list .services-inner .btn-part svg {
+  width: 15px;
+  height: 15px;
+}
+.rs-service-list .services-inner .btn-part svg path {
+  fill: var(--primaryColor);
+  transition: var(--transition);
+}
+.rs-service-list .services-inner .btn-part i {
+  font-size: 22px;
+  color: var(--primaryColor);
+  line-height: 1;
+}
+.rs-service-list .services-inner .btn-part.btn-style-2 {
+  --baseSize: 60px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  transition: var(--transition);
+  border: 1px solid var(--titleColor);
+  padding: 5px;
+  border-radius: 50px;
+  color: var(--titleColor);
+}
+.rs-service-list .services-inner .btn-part.btn-style-2 .btn-icon {
+  background: var(--primaryColor);
+  height: var(--baseSize);
+  width: var(--baseSize);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease 0s, right 0.5s;
+  position: relative;
+  right: 0;
+}
+.rs-service-list .services-inner .btn-part.btn-style-2 .btn-icon svg {
+  width: 16px;
+  height: 16px;
+}
+.rs-service-list .services-inner .btn-part.btn-style-2 .btn-icon svg path {
+  fill: var(--titleColor);
+  transition: var(--transition);
+}
+.rs-service-list .services-inner .btn-part.btn-style-2 .btn-icon i {
+  color: var(--titleColor);
+  font-size: 16px;
+  transition: var(--transition);
+}
+.rs-service-list .services-inner .btn-part.btn-style-2 .btn-text {
+  display: inline-block;
+  transition: all 0.5s ease 0s, right 0.5s;
+  padding: 0 20px;
+  z-index: 9;
+  order: 2;
+  transform: translate3d(0px, 0px, 0px);
+  transform-style: preserve-3d;
+}
+.rs-service-list .services-inner .btn-part.btn-style-2.btn-row-reverse .btn-icon {
+  right: unset;
+  left: 0;
+}
+.rs-service-list .services-inner .top-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.rs-service-list .services-inner .top-wrapper span {
+  display: block;
+  line-height: 18px;
+}
+.rs-service-list .services-inner .bottom-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  transition: var(--transition);
+  overflow: hidden;
+}
+.rs-service-list .services-inner:last-child {
+  margin-bottom: 0 !important;
+}
+.rs-service-list .services-inner:hover .feature_img {
+  opacity: 1;
+}
+.rs-service-list .services-inner:hover .feature_img .overlay-image {
+  opacity: 1;
+  visibility: visible;
+}
+.rs-service-list .services-inner:hover::after {
+  left: 0;
+}
+.rs-service-list .services-inner:hover .btn-part.btn-style-2 .btn-icon {
+  right: calc(-100% - -1 * var(--baseSize));
+}
+.rs-service-list .services-inner:hover .btn-part.btn-style-2.icon-yes .btn-text {
+  transform: translate3d(calc(-1 * var(--baseSize)), 0px, 0px) !important;
+}
+.rs-service-list .services-inner:hover .btn-part.btn-style-2.btn-row-reverse .btn-icon {
+  left: calc(-100% - -1 * var(--baseSize));
+}
+.rs-service-list .services-inner:hover .btn-part.btn-style-2.btn-row-reverse.icon-yes .btn-text {
+  transform: translate3d(var(--baseSize), 0px, 0px) !important;
+}
+.rs-service-list .services-inner:hover .btn-part .btn-icon em > * {
+  transform: translateX(150%);
+}
+.rs-service-list .services-inner:hover .btn-part .btn-icon em > *:last-child {
+  transform: translateX(0) !important;
+}
+.rs-service-list .services-inner:hover .btn-part .btn-icon em svg path {
+  fill: var(--primaryForegroundColor);
+}
+.rs-service-list .services-inner:hover .btn-part .btn-icon em i {
+  color: var(--primaryForegroundColor);
+}
+.rs-service-list .services-inner:hover .btn-part .btn-icon.anim-dir-bottom em > * {
+  transform: translateY(150%);
+}
+.rs-service-list .services-inner:hover .btn-part .btn-icon.anim-dir-top em > * {
+  transform: translateY(-150%);
+}
+.rs-service-list .services-inner:hover .btn-part .btn-icon.anim-dir-left em > * {
+  transform: translateX(-150%);
+}
+.rs-service-list .services-inner:hover .btn-part .btn-icon.anim-dir-angle em > * {
+  transform: translate(150%, -150%);
+}
+.rs-service-list.thumb-bg .services-inner {
+  overflow: hidden;
+}
+.rs-service-list.thumb-bg .services-inner .feature_img {
+  z-index: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  left: -30%;
+  overflow: hidden;
+}
+.rs-service-list.thumb-bg .services-inner .feature_img img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+.rs-service-list.thumb-bg .services-inner > *:not(.feature_img) {
+  z-index: 1;
+}
+.rs-service-list.thumb-bg .services-inner.active .feature_img, .rs-service-list.thumb-bg .services-inner:hover .feature_img {
+  left: 0;
+  width: 100%;
+  opacity: 1;
+}
+.rs-service-list.scrollable-yes {
+  height: 200px;
+  overflow-y: auto;
+  padding-right: 25px;
+}
+.rs-service-list.scrollable-yes::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+.rs-service-list.scrollable-yes::-webkit-scrollbar-track {
+  background-color: rgba(var(--primaryColorRGB), 30%);
+  border-radius: 5px;
+}
+.rs-service-list.scrollable-yes::-webkit-scrollbar-thumb {
+  background-color: var(--titleColor);
+  border-radius: 5px;
+}
+.rs-service-list.style-2 .services-inner {
+  align-items: stretch;
+}
+.rs-service-list.style-2 .services-inner .feature_img.media-aside {
+  height: unset;
+  overflow: hidden;
+}
+.rs-service-list.style-2 .services-inner .feature_img.media-aside img {
+  position: absolute;
+  inset: 0;
+  object-position: top center;
+}
+.rs-service-list.style-3 .services-inner {
+  border: none;
+  padding: 20px;
+}
+.rs-service-list.style-3.animate-border {
+  position: relative;
+}
+.rs-service-list.style-3.animate-border .services-inner:after {
+  position: absolute;
+  content: "";
+  left: auto;
+  bottom: 0;
+  height: 5px;
+  background: var(--primaryColor);
+  width: 0;
+  right: 0;
+  transition: all 0.5s ease-in-out;
+}
+.rs-service-list.style-3.animate-border .services-inner.active:after, .rs-service-list.style-3.animate-border .services-inner:hover:after {
+  width: 100%;
+  left: 0;
+}
+.rs-service-list.style-3 .top-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+.rs-service-list.style-3 .icon-wrap svg {
+  width: 20px;
+  height: 20px;
+}
+.rs-service-list.style-3 .icon-wrap i {
+  font-size: 20px;
+}
+.rs-service-list.dynamic .top-wrapper {
+  width: 100%;
+}

@@ -1,0 +1,131 @@
+.rs-skill-bar .skillbar {
+  background: #eeeeee;
+  display: inline-block;
+  height: 16px;
+  position: relative;
+  width: 100%;
+}
+.rs-skill-bar .skillbar .skillbar-bar {
+  background: #1273eb;
+  height: 16px;
+  width: 0;
+  margin-bottom: 0;
+  overflow: visible !important;
+}
+.rs-skill-bar .skillbar .skillbar-title {
+  position: absolute;
+  z-index: 1;
+  transition: var(--transition);
+}
+.rs-skill-bar .skillbar .skill-bar-percent {
+  position: absolute;
+  line-height: 1;
+}
+.rs-skill-bar .skillbar.layout-style-vertical {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  width: 20px;
+}
+.rs-skill-bar .skillbar.layout-style-vertical .skillbar-bar {
+  width: 100%;
+  height: 0;
+}
+.rs-skill-bar .skillbar.layout-style-circle {
+  background: transparent;
+  height: auto;
+}
+.rs-skill-bar .skillbar.layout-style-circle .card-circle {
+  position: relative;
+  display: inline-block;
+}
+.rs-skill-bar .skillbar.layout-style-circle .card-circle svg {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg);
+  z-index: 1;
+}
+.rs-skill-bar .skillbar.layout-style-circle .card-circle svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #eeeeee;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+.rs-skill-bar .skillbar.layout-style-circle .card-circle svg circle.thiscir {
+  stroke-dasharray: 294px;
+  stroke-dashoffset: 294px;
+  stroke: var(--primaryColor);
+}
+.rs-skill-bar .skillbar.layout-style-circle .card-circle .skill-bar-percent {
+  top: 5px !important;
+  bottom: 5px !important;
+  left: 5px !important;
+  right: 5px !important;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.rs-skill-bar .skillbar.layout-style-circle .skillbar-title {
+  position: relative;
+  top: unset;
+  bottom: 0;
+}
+.rs-skill-bar.gradiant_color .skill-bar-percent {
+  -webkit-background-clip: text;
+  color: transparent !important;
+  right: unset !important;
+}
+
+.rs-skill-bar.animation .skillbar .skillbar-bar {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+  -webkit-animation: rs-progress-pie-stripes 1s linear infinite;
+  animation: rs-progress-pie-stripes 1s linear infinite;
+}
+
+.rs-skill-bar.striped .skillbar .skillbar-bar {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+
+.rs-skill-bar.style1 .skillbar .skillbar-title {
+  top: -25px;
+}
+.rs-skill-bar.style1 .skillbar .skill-bar-percent {
+  right: 0;
+  top: -25px;
+}
+
+.rs-skill-bar.style2 .skillbar .skillbar-title {
+  left: 0;
+  padding: 2px 20px 0;
+  top: 0;
+  width: 160px;
+  background: #83b614;
+}
+.rs-skill-bar.style2 .skillbar .skill-bar-percent {
+  right: 10px;
+  top: 0;
+}
+
+.rs-skill-bar.style3 .skillbar .skillbar-title {
+  top: -25px;
+}
+.rs-skill-bar.style3 .skillbar .skillbar-bar {
+  position: relative;
+}
+.rs-skill-bar.style3 .skillbar .skillbar-bar .skill-bar-percent.tooltip-style:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 12px solid #f55b1f;
+  border-left: 14px solid transparent;
+  right: 0;
+}

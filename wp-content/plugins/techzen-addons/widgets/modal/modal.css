@@ -1,0 +1,71 @@
+.rs-modal-maker a.modal-trigger {
+  display: inline-block;
+  cursor: pointer;
+}
+.rs-modal-maker a.modal-trigger.type-button {
+  padding: 14px 40px;
+  border-radius: 3px;
+  background: var(--primaryColor);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  justify-content: center;
+}
+.rs-modal-maker a.modal-trigger.type-button svg {
+  width: 17px;
+  height: 17px;
+}
+.rs-modal-maker a.modal-trigger.type-button svg path {
+  fill: #fff;
+}
+.rs-modal-maker a.modal-trigger.type-button i {
+  font-size: 17px;
+}
+.rs-modal-maker a.modal-trigger.type-button:hover {
+  background: var(--secondaryColor);
+}
+.rs-modal-maker .modal {
+  z-index: 9999;
+  padding: 10px !important;
+}
+.rs-modal-maker .modal .modal-dialog {
+  margin: 0 auto;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.rs-modal-maker .modal .modal-dialog .modal-content {
+  border: none;
+  padding: 10px;
+  max-height: calc(100vh - 10px);
+  overflow-y: auto;
+}
+.rs-modal-maker .modal .modal-dialog .modal_close_btn {
+  background: var(--primaryColor);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 3px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  justify-content: center;
+  z-index: 1;
+}
+.rs-modal-maker .modal .modal-dialog .modal_close_btn svg {
+  width: 17px;
+  height: 17px;
+}
+.rs-modal-maker .modal .modal-dialog .modal_close_btn svg path {
+  fill: #fff;
+  transition: var(--transition);
+}
+.rs-modal-maker .modal .modal-dialog .modal_close_btn i {
+  transition: var(--transition);
+  font-size: 17px;
+}

@@ -1,0 +1,76 @@
+.rs-accordion.accordion {
+  --item-space: 20px;
+}
+.rs-accordion.accordion .accordion-item {
+  border: 1px solid var(--borderColor);
+  border-radius: 0;
+}
+.rs-accordion.accordion .accordion-item:not(:last-child) {
+  margin-bottom: var(--item-space);
+}
+.rs-accordion.accordion .accordion-item .accordion-title {
+  position: relative;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  cursor: pointer;
+  color: var(--titleColor);
+}
+.rs-accordion.accordion .accordion-item .accordion-title .title-text {
+  flex-grow: 1;
+}
+.rs-accordion.accordion .accordion-item .item-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  transition: 0.3s;
+  flex: 0 0 auto;
+}
+.rs-accordion.accordion .accordion-item .accordion-icons {
+  flex-shrink: 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.rs-accordion.accordion .accordion-item .accordion-icons .collapse-icon {
+  display: none;
+}
+.rs-accordion.accordion .accordion-item .accordion-icons svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+.rs-accordion.accordion .accordion-item .accordion-body {
+  position: relative;
+  padding: 0 25px 25px;
+}
+.rs-accordion.accordion .accordion-item .accordion-body p:last-child {
+  margin-bottom: 0;
+}
+.rs-accordion.accordion .accordion-item.active .accordion-icons .expand-icon {
+  display: none;
+}
+.rs-accordion.accordion .accordion-item.active .accordion-icons .collapse-icon {
+  display: block;
+}
+.rs-accordion.accordion.compact-style {
+  border: var(--border-width) var(--border-type) var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  --item-space: 0;
+  --border-width: 1px;
+  --border-type: solid;
+  --border-color: var(--borderColor);
+}
+.rs-accordion.accordion.compact-style .accordion-item {
+  border: none;
+  background-color: transparent;
+}
+.rs-accordion.accordion.compact-style .accordion-item:not(:last-child) {
+  border-bottom: var(--border-width) var(--border-type) var(--border-color);
+}

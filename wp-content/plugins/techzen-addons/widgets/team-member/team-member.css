@@ -1,0 +1,192 @@
+.rs-team-members .grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px 30px;
+}
+.rs-team-members .team-item {
+  position: relative;
+}
+.rs-team-members .team-item,
+.rs-team-members .team-item .image-wrap img,
+.rs-team-members .team-item .member-name,
+.rs-team-members .team-item .member-designation,
+.rs-team-members .team-item .details-btn {
+  transition: 0.3s;
+}
+.rs-team-members .team-item .image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.rs-team-members .team-item .image-wrap img {
+  width: 100%;
+  border-radius: 5px;
+}
+.rs-team-members .team-item .social-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--primaryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  line-height: 1;
+  padding: 10px;
+  border-radius: 0 0 5px 0;
+  transform: translateX(-100%);
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+}
+.rs-team-members .team-item .social-links a {
+  color: var(--primaryForegroundColor);
+  font-size: 16px;
+}
+.rs-team-members .team-item .social-links a i {
+  font-size: inherit;
+}
+.rs-team-members .team-item .name-designation {
+  flex-grow: 1;
+}
+.rs-team-members .team-item .member-name {
+  margin: 0 0 5px;
+}
+.rs-team-members .team-item .member-name a {
+  color: inherit;
+  transition: inherit;
+}
+.rs-team-members .team-item .member-designation {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+}
+.rs-team-members .team-item .content-wrap {
+  padding-top: 25px;
+}
+.rs-team-members .team-item .content-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.rs-team-members .team-item .details-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 22px;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+}
+.rs-team-members .team-item .details-btn svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+.rs-team-members .team-item .details-btn em {
+  position: relative;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+}
+.rs-team-members .team-item .details-btn em i,
+.rs-team-members .team-item .details-btn em svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: var(--transition);
+}
+.rs-team-members .team-item .details-btn em i:last-child,
+.rs-team-members .team-item .details-btn em svg:last-child {
+  color: var(--primaryColor);
+  transform: translateX(-150%);
+}
+.rs-team-members .team-item .details-btn.anim-dir-bottom em i:last-child,
+.rs-team-members .team-item .details-btn.anim-dir-bottom em svg:last-child {
+  transform: translateY(-150%);
+}
+.rs-team-members .team-item .details-btn.anim-dir-top em i:last-child,
+.rs-team-members .team-item .details-btn.anim-dir-top em svg:last-child {
+  transform: translateY(150%);
+}
+.rs-team-members .team-item .details-btn.anim-dir-left em i:last-child,
+.rs-team-members .team-item .details-btn.anim-dir-left em svg:last-child {
+  transform: translateX(150%);
+}
+.rs-team-members .team-item .details-btn.anim-dir-angle em i:last-child,
+.rs-team-members .team-item .details-btn.anim-dir-angle em svg:last-child {
+  transform: translate(-150%, 150%);
+}
+.rs-team-members .team-item .animated-border {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--secondaryColor);
+  margin-top: 20px;
+}
+.rs-team-members .team-item .animated-border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--primaryColor);
+  transition: 0.3s linear;
+}
+.rs-team-members .team-item:hover .social-links {
+  transform: translateX(0);
+  visibility: visible;
+}
+.rs-team-members .team-item:hover .details-btn {
+  color: var(--primaryColor);
+}
+.rs-team-members .team-item:hover .details-btn em i,
+.rs-team-members .team-item:hover .details-btn em svg {
+  transform: translateX(150%);
+}
+.rs-team-members .team-item:hover .details-btn em i:last-child,
+.rs-team-members .team-item:hover .details-btn em svg:last-child {
+  transform: translateX(0) !important;
+}
+.rs-team-members .team-item:hover .details-btn.anim-dir-bottom em i,
+.rs-team-members .team-item:hover .details-btn.anim-dir-bottom em svg {
+  transform: translateY(150%);
+}
+.rs-team-members .team-item:hover .details-btn.anim-dir-top em i,
+.rs-team-members .team-item:hover .details-btn.anim-dir-top em svg {
+  transform: translateY(-150%);
+}
+.rs-team-members .team-item:hover .details-btn.anim-dir-left em i,
+.rs-team-members .team-item:hover .details-btn.anim-dir-left em svg {
+  transform: translateX(-150%);
+}
+.rs-team-members .team-item:hover .details-btn.anim-dir-angle em i,
+.rs-team-members .team-item:hover .details-btn.anim-dir-angle em svg {
+  transform: translate(150%, -150%);
+}
+.rs-team-members .team-item:hover .animated-border::after {
+  width: 100%;
+}
+.rs-team-members.style-two .team-item .content-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  padding: 40px;
+  background-color: var(--secondaryColor);
+  border-radius: 0 5px 5px 5px;
+}
+.rs-team-members.style-two .team-item .member-name,
+.rs-team-members.style-two .team-item .member-designation,
+.rs-team-members.style-two .team-item .details-btn {
+  color: var(--secondaryForegroundColor);
+}
+.rs-team-members.style-two .team-item .animated-border {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.rs-team-members.style-two .team-item:hover .details-btn {
+  color: var(--primaryColor);
+}

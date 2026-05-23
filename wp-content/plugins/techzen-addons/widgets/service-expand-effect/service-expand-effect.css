@@ -1,0 +1,311 @@
+.rs-service-flex.style1 {
+  position: relative;
+  overflow: hidden;
+}
+.rs-service-flex.style1 > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.1);
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.rs-service-flex.style1 > img.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.rs-service-flex.style1 .row {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+.rs-service-flex.style1 .row .grid-item {
+  padding: 0;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-end;
+  padding: 30px;
+  transition: var(--transition);
+  background: transparent;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .icon-wrap {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .icon-wrap svg {
+  width: 40px;
+  height: 40px;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .icon-wrap svg path {
+  fill: var(--whiteColor);
+  transition: var(--transition);
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .icon-wrap i {
+  font-size: 40px;
+  color: var(--whiteColor);
+  gap: 0;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .number {
+  position: absolute;
+  right: 35px;
+  top: 45px;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .number span {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  color: var(--whiteColor);
+  font-family: var(--titleFont);
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .title {
+  margin-bottom: 15px;
+  position: relative;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .title a {
+  color: #fff;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .title a:hover {
+  color: var(--primaryColor);
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .desc {
+  color: #fff;
+  height: 0;
+  transform: scaleY(0);
+  transition: var(--transition);
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .btn-part {
+  margin-top: 15px;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .btn-part .service-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  color: #fff;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .btn-part .service-btn i {
+  font-size: 18px;
+  color: #fff;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .btn-part .service-btn svg {
+  width: 18px;
+  height: 18px;
+}
+.rs-service-flex.style1 .row .grid-item .service-inner .btn-part .service-btn svg path {
+  fill: #fff;
+}
+.rs-service-flex.style1 .row .grid-item.active .service-inner {
+  background: rgba(20, 74, 127, 0.4);
+}
+.rs-service-flex.style1 .row .grid-item.active .service-inner .desc {
+  height: 78px;
+  transform: scaleY(1);
+}
+.rs-service-flex.style1 .row .grid-item:last-child .service-inner {
+  border-right-width: 0;
+}
+.rs-service-flex.style1::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(44, 44, 60, 0.7);
+}
+.rs-service-flex.style2 .wrapper-part {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  justify-content: space-around;
+}
+.rs-service-flex.style2 .wrapper-part > div {
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+.rs-service-flex.style2 .wrapper-part .left-part {
+  width: 45%;
+}
+.rs-service-flex.style2 .wrapper-part .thumbnail-part-wrapper {
+  width: 47%;
+}
+.rs-service-flex.style2 .grid-item .service-inner .title {
+  margin: 0;
+}
+.rs-service-flex.style2 .grid-item .service-inner .title a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+  color: var(--titleColor);
+  padding-top: 28px;
+  padding-bottom: 28px;
+  border-style: solid;
+  border-color: var(--borderColor);
+  border-width: 0;
+  border-top-width: 1px;
+  cursor: pointer;
+  opacity: 0.2;
+  position: relative;
+}
+.rs-service-flex.style2 .grid-item .service-inner .title a i {
+  transition: var(--transition);
+  color: #fff;
+  font-size: 23px;
+}
+.rs-service-flex.style2 .grid-item .service-inner .title a svg {
+  width: 23px;
+  height: 23px;
+}
+.rs-service-flex.style2 .grid-item .service-inner .title a svg path {
+  fill: #fff;
+  transition: var(--transition);
+}
+.rs-service-flex.style2 .grid-item:last-child .title {
+  border-bottom-width: 1px;
+}
+.rs-service-flex.style2 .grid-item.active .service-inner .title a {
+  color: var(--titleColor);
+  padding-left: 24px;
+  padding-right: 24px;
+  opacity: 1;
+}
+.rs-service-flex.style2 .grid-item.active .service-inner .title a i {
+  color: var(--primaryColor);
+}
+.rs-service-flex.style2 .grid-item.active .service-inner .title a svg path {
+  fill: var(--primaryColor);
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.1);
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  background-size: cover !important;
+  background-position: center !important;
+  overflow: hidden;
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper {
+  position: absolute;
+  transition: transform 0.1s;
+  left: 40px;
+  bottom: 40px;
+  padding: 30px;
+  max-width: 295px;
+  background-color: var(--shadeColor);
+  border: 1px solid var(--borderColor);
+  backdrop-filter: blur(0px);
+  overflow: hidden;
+  z-index: 1;
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .number {
+  color: var(--titleColor);
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .icon-wrap {
+  margin-bottom: 20px;
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .icon-wrap i {
+  color: var(--titleColor);
+  font-size: 34px;
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .icon-wrap svg {
+  width: 34px;
+  height: 34px;
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .icon-wrap svg path {
+  fill: var(--titleColor);
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .title {
+  margin-bottom: 10px;
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .title a {
+  color: var(--titleColor);
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .title a:hover {
+  color: var(--primaryColor);
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .desc {
+  color: var(--bodyColor);
+  margin-bottom: 10px;
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .btn-part a {
+  color: var(--titleColor);
+  transition: var(--transition);
+  gap: 7px;
+  display: inline-flex;
+  align-items: center;
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .btn-part a svg {
+  width: 12px;
+  height: 12px;
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .btn-part a svg path {
+  fill: var(--titleColor);
+  transition: var(--transition);
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .btn-part a i {
+  font-size: 12px;
+  color: var(--titleColor);
+  transition: var(--transition);
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .btn-part a:hover {
+  color: var(--primaryColor);
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .btn-part a:hover i {
+  color: var(--primaryColor);
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper .btn-part a:hover svg path {
+  fill: var(--primaryColor);
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part .content-wrapper:after {
+  position: absolute;
+  content: "";
+  border-width: 40px;
+  border-right-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: var(--primaryColor);
+  top: -16px;
+  right: 4px;
+  transform: rotate(-45deg);
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+}
+.rs-service-flex.style2 .thumbnail-part-wrapper .thumbnail-part.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}

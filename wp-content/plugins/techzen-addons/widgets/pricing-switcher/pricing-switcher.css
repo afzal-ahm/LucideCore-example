@@ -1,0 +1,1410 @@
+.rs-pricing-switcher {
+  position: relative;
+}
+.rs-pricing-switcher .switcher-part {
+  margin-bottom: 50px !important;
+}
+.rs-pricing-switcher .switcher-part .pricing-switcher-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.rs-pricing-switcher .switcher-part .pricing-switcher-wrapper span {
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+}
+.rs-pricing-switcher.switcher-button-style1 .switcher-part {
+  text-align: center;
+}
+.rs-pricing-switcher.switcher-button-style1 .switcher-part .pricing-switcher-wrapper {
+  gap: 20px;
+}
+.rs-pricing-switcher.switcher-button-style1 .switcher-part .pricing-switcher-wrapper span:not(.switcher) {
+  padding: 0 !important;
+  z-index: 1;
+  position: relative;
+  color: var(--titleColor);
+  opacity: 1;
+}
+.rs-pricing-switcher.switcher-button-style1 .switcher-part .pricing-switcher-wrapper span.switcher {
+  width: 50px;
+  height: 30px;
+  background: var(--primaryColor);
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 0px 0px 8px 3px rgba(0, 0, 0, 0.2);
+}
+.rs-pricing-switcher.switcher-button-style1 .switcher-part .pricing-switcher-wrapper span.switcher:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.3s;
+}
+.rs-pricing-switcher.switcher-button-style1.switched .switcher-part .pricing-switcher-wrapper span.btn-monthly {
+  opacity: 0.6;
+}
+.rs-pricing-switcher.switcher-button-style1.switched .switcher-part .pricing-switcher-wrapper span.switcher:after {
+  left: calc(100% - 27px);
+}
+.rs-pricing-switcher.switcher-button-style1:not(.switched) .switcher-part .pricing-switcher-wrapper span.btn-yearly {
+  opacity: 0.6;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part {
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--borderColor);
+  padding: 8px;
+  border-radius: 43px;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper {
+  border-radius: inherit;
+  width: 100%;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper span {
+  border-radius: inherit;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper span:not(.switcher) {
+  padding: 6px 10px;
+  z-index: 1;
+  position: relative;
+  width: 50%;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper span.btn-yearly {
+  color: var(--bodyColor);
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper span.btn-monthly {
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper span.switcher {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 50%;
+  background: var(--primaryColor);
+  transition: var(--transition);
+}
+.rs-pricing-switcher.switcher-button-style2.switched .switcher-part .pricing-switcher-wrapper span.switcher {
+  left: 50%;
+}
+.rs-pricing-switcher.switcher-button-style2.switched .switcher-part .pricing-switcher-wrapper span.btn-monthly {
+  color: var(--bodyColor);
+}
+.rs-pricing-switcher.switcher-button-style2.switched .switcher-part .pricing-switcher-wrapper span.btn-yearly {
+  color: var(--titleColor);
+}
+.rs-pricing-switcher .pkg-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  background: var(--primaryColor);
+  width: 50px;
+  height: 50px;
+  transition: var(--transition);
+  border-radius: 3px;
+}
+.rs-pricing-switcher .pkg-icons > * {
+  flex-shrink: 0;
+}
+.rs-pricing-switcher .pkg-icons img {
+  width: 30px;
+  height: auto;
+}
+.rs-pricing-switcher .pkg-icons svg {
+  width: 20px;
+  height: 20px;
+}
+.rs-pricing-switcher .pkg-icons svg path {
+  transition: var(--transition);
+}
+.rs-pricing-switcher .pkg-icons i {
+  color: var(--whiteColor);
+  font-size: 20px;
+  transition: var(--transition);
+}
+.rs-pricing-switcher .row {
+  align-items: flex-end;
+}
+.rs-pricing-switcher .pricing-item {
+  position: relative;
+  transition: var(--transition);
+}
+.rs-pricing-switcher .pricing-item.yearly {
+  display: none;
+}
+.rs-pricing-switcher.switched .pricing-item.monthly {
+  display: none;
+}
+.rs-pricing-switcher.switched .pricing-item.yearly {
+  display: block;
+}
+.rs-pricing-switcher .price {
+  transition: var(--transition);
+  font-family: var(--titleFont);
+}
+.rs-pricing-switcher.switching .pricing-item {
+  opacity: 0;
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn {
+  padding: 0 45px;
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 4px;
+  color: var(--titleColor);
+  border: 2px solid var(--borderColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a > * {
+  flex-shrink: 0;
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a svg {
+  width: 18px;
+  height: 18px;
+  transition: var(--transition);
+  overflow: visible;
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a svg path {
+  fill: var(--titleColor);
+  transition: var(--transition);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a i {
+  font-size: 18px;
+  color: var(--titleColor);
+  transition: var(--transition);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a em {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  line-height: 20px;
+  flex-shrink: 0;
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a em > * {
+  height: inherit;
+  width: inherit;
+  line-height: inherit;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: var(--transition);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a em > *:last-child {
+  transform: translateX(-150%);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a em svg path {
+  fill: var(--primaryForegroundColor);
+  transition: var(--transition);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a em i {
+  color: var(--primaryForegroundColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a:hover {
+  background: var(--primaryColor);
+  border-color: var(--primaryColor);
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a:hover svg path {
+  fill: var(--titleColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a:hover i {
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a:hover em > * {
+  transform: translateX(150%);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a:hover em > *:last-child {
+  transform: translateX(0) !important;
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a:hover em svg path {
+  fill: var(--primaryForegroundColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a:hover em i {
+  color: var(--primaryForegroundColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a.anim-dir-bottom em > *:last-child {
+  transform: translateY(-150%);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a.anim-dir-bottom:hover em > * {
+  transform: translateY(150%);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a.anim-dir-top em > *:last-child {
+  transform: translateY(150%);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a.anim-dir-top:hover em > * {
+  transform: translateY(-150%);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a.anim-dir-left em > *:last-child {
+  transform: translateX(150%);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a.anim-dir-left:hover em > * {
+  transform: translateX(-150%);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a.anim-dir-angle em > *:last-child {
+  transform: translate(-150%, 150%);
+}
+.rs-pricing-switcher.btn-1 .pricing-item .pricing-btn a.anim-dir-angle:hover em > * {
+  transform: translate(150%, -150%);
+}
+.rs-pricing-switcher.btn-1 .pricing-item.item-active .pricing-btn a {
+  background: var(--primaryColor);
+  border-color: var(--primaryColor);
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item.item-active .pricing-btn a:hover {
+  border-color: var(--borderColor);
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item.item-active .pricing-btn a:hover svg path {
+  fill: var(--titleColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item.item-active .pricing-btn a:hover i {
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item.item-active .pricing-btn a svg path {
+  fill: var(--titleColor);
+}
+.rs-pricing-switcher.btn-1 .pricing-item.item-active .pricing-btn a i {
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn {
+  --button-measure: 50px;
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn a {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn a span {
+  background: var(--primaryColor);
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn a .p-icon {
+  height: var(--button-measure);
+  width: var(--button-measure);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+  opacity: 0;
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn a .p-icon.two {
+  transform: translate3d(calc(-1 * var(--button-measure)), 0px, 0px);
+  transform-style: preserve-3d;
+  opacity: 1;
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn a .p-icon svg {
+  width: 16px;
+  height: 16px;
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn a .p-icon svg path {
+  fill: var(--titleColor);
+  transition: var(--transition);
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn a .p-icon i {
+  color: var(--titleColor);
+  font-size: 16px;
+  transition: var(--transition);
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn a .p-btn-text {
+  color: var(--titleColor);
+  border-radius: 28px;
+  padding: 8px 36px;
+  min-height: var(--button-measure);
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  z-index: 9;
+  transform: translate3d(calc(-1 * var(--button-measure)), 0px, 0px);
+  transform-style: preserve-3d;
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn a:hover .p-icon {
+  opacity: 1;
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn a:hover .p-icon.two {
+  opacity: 0;
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn a:hover .p-btn-text {
+  transform: translate3d(0px, 0px, 0px) !important;
+  transform-style: preserve-3d;
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn.btn-row-reverse .p-btn-text {
+  transform: translate3d(var(--button-measure), 0px, 0px);
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn.btn-row-reverse .p-icon.two {
+  transform: translate3d(var(--button-measure), 0px, 0px);
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn.btn-rtl.btn-row {
+  flex-direction: row !important;
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn.btn-rtl.btn-row .p-btn-text {
+  transform: translate3d(var(--button-measure), 0px, 0px);
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn.btn-rtl.btn-row .p-icon.two {
+  transform: translate3d(var(--button-measure), 0px, 0px);
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn.btn-rtl.btn-row-reverse {
+  flex-direction: row-reverse !important;
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn.btn-rtl.btn-row-reverse .p-btn-text {
+  transform: translate3d(calc(-1 * var(--button-measure)), 0px, 0px);
+}
+.rs-pricing-switcher.btn-2 .pricing-item .pricing-btn.btn-rtl.btn-row-reverse .p-icon.two {
+  transform: translate3d(calc(-1 * var(--button-measure)), 0px, 0px);
+}
+.rs-pricing-switcher.btn-2 .pricing-item.item-active .pricing-btn a span {
+  background: var(--primaryColor);
+}
+.rs-pricing-switcher.btn-2 .pricing-item.item-active .pricing-btn a .p-icon svg path {
+  fill: var(--titleColor);
+}
+.rs-pricing-switcher.btn-2 .pricing-item.item-active .pricing-btn a .p-icon i {
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.btn-2 .pricing-item.item-active .pricing-btn a .p-btn-text {
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn {
+  --button-measure: 60px;
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn a {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  transition: var(--transition);
+  border: 1px solid var(--titleColor);
+  padding: 5px;
+  border-radius: 50px;
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn a .p-icon {
+  background: var(--primaryColor);
+  height: var(--button-measure);
+  width: var(--button-measure);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease 0s, right 0.5s;
+  position: relative;
+  right: 0;
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn a .p-icon svg {
+  width: 16px;
+  height: 16px;
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn a .p-icon svg path {
+  fill: var(--titleColor);
+  transition: var(--transition);
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn a .p-icon i {
+  color: var(--titleColor);
+  font-size: 16px;
+  transition: var(--transition);
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn a .p-btn-text {
+  display: inline-block;
+  text-transform: uppercase;
+  transition: all 0.5s ease 0s, right 0.5s;
+  padding: 0 20px;
+  z-index: 9;
+  transform: translate3d(0px, 0px, 0px);
+  transform-style: preserve-3d;
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn a:hover .p-btn-text {
+  transform: translate3d(calc(-1 * var(--button-measure)), 0px, 0px) !important;
+  transform-style: preserve-3d;
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn a:hover .p-icon {
+  right: calc(-100% - -1 * var(--button-measure));
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn.btn-rtl.btn-row-reverse a {
+  flex-direction: row !important;
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn.btn-rtl.btn-row a {
+  flex-direction: row-reverse !important;
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn.btn-row-reverse a .p-icon {
+  right: unset;
+  left: 0;
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn.btn-row-reverse a:hover .p-icon {
+  left: calc(-100% - -1 * var(--button-measure));
+}
+.rs-pricing-switcher.btn-3 .pricing-item .pricing-btn.btn-row-reverse a:hover .p-btn-text {
+  transform: translate3d(var(--button-measure), 0px, 0px) !important;
+}
+.rs-pricing-switcher.style-4 .pricing-item, .rs-pricing-switcher.style-3 .pricing-item, .rs-pricing-switcher.style-1 .pricing-item {
+  background: var(--shadeColor);
+  border-radius: 4px;
+  text-align: center;
+  border: 3px solid var(--borderColor);
+  padding: 30px 0 50px;
+  position: relative;
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricebadge, .rs-pricing-switcher.style-3 .pricing-item .pricebadge, .rs-pricing-switcher.style-1 .pricing-item .pricebadge {
+  display: inline-block;
+}
+.rs-pricing-switcher.style-4 .pricing-item .title-wrapper, .rs-pricing-switcher.style-3 .pricing-item .title-wrapper, .rs-pricing-switcher.style-1 .pricing-item .title-wrapper {
+  padding: 0 45px;
+}
+.rs-pricing-switcher.style-4 .pricing-item .title-wrapper .title, .rs-pricing-switcher.style-3 .pricing-item .title-wrapper .title, .rs-pricing-switcher.style-1 .pricing-item .title-wrapper .title {
+  margin: 0 0 8px 0;
+  font-size: 30px;
+  line-height: 40px;
+}
+.rs-pricing-switcher.style-4 .pricing-item .title-wrapper .intro-txt, .rs-pricing-switcher.style-3 .pricing-item .title-wrapper .intro-txt, .rs-pricing-switcher.style-1 .pricing-item .title-wrapper .intro-txt {
+  font-size: 16px;
+  line-height: 26px;
+}
+.rs-pricing-switcher.style-4 .pricing-item .price-wrapper, .rs-pricing-switcher.style-3 .pricing-item .price-wrapper, .rs-pricing-switcher.style-1 .pricing-item .price-wrapper {
+  padding: 22px 45px 14px;
+  border-top: 1px solid var(--primaryColor);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.rs-pricing-switcher.style-4 .pricing-item .price-wrapper .price, .rs-pricing-switcher.style-3 .pricing-item .price-wrapper .price, .rs-pricing-switcher.style-1 .pricing-item .price-wrapper .price {
+  color: var(--titleColor);
+  font-weight: 700;
+  line-height: 1;
+  font-size: 60px;
+}
+.rs-pricing-switcher.style-4 .pricing-item .price-wrapper .plan-duration, .rs-pricing-switcher.style-3 .pricing-item .price-wrapper .plan-duration, .rs-pricing-switcher.style-1 .pricing-item .price-wrapper .plan-duration {
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 500;
+}
+.rs-pricing-switcher.style-4 .pricing-item .price-description, .rs-pricing-switcher.style-3 .pricing-item .price-description, .rs-pricing-switcher.style-1 .pricing-item .price-description {
+  font-size: 16px;
+  line-height: 26px;
+  padding: 0 45px;
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-feature, .rs-pricing-switcher.style-3 .pricing-item .pricing-feature, .rs-pricing-switcher.style-1 .pricing-item .pricing-feature {
+  text-align: left;
+  padding: 32px 45px 0;
+  width: 100%;
+  border-top: 1px solid var(--borderColor);
+  margin: 30px 0 40px;
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-feature .feature-title, .rs-pricing-switcher.style-3 .pricing-item .pricing-feature .feature-title, .rs-pricing-switcher.style-1 .pricing-item .pricing-feature .feature-title {
+  position: relative;
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-feature ul, .rs-pricing-switcher.style-3 .pricing-item .pricing-feature ul, .rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-feature ul li, .rs-pricing-switcher.style-3 .pricing-item .pricing-feature ul li, .rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul li {
+  position: relative;
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 500;
+  color: var(--titleColor);
+  padding-left: 0;
+  margin: 13px 0;
+  transition: all 0.5s ease;
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-feature ul li:before, .rs-pricing-switcher.style-3 .pricing-item .pricing-feature ul li:before, .rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul li:before {
+  content: "\eb7b";
+  color: var(--primaryColor);
+  font-size: 20px;
+  margin: 0;
+  font-weight: 900;
+  display: inline-block;
+  font-family: remixicon;
+  position: absolute;
+  left: 0;
+  transition: all 0.5s ease;
+  width: 26px;
+  height: 26px;
+  background-color: #1a1c14;
+  text-align: center;
+  border-radius: 100px;
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-feature ul li.close:before, .rs-pricing-switcher.style-3 .pricing-item .pricing-feature ul li.close:before, .rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul li.close:before {
+  color: inherit;
+  content: "\eb99";
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-feature ul li:first-child, .rs-pricing-switcher.style-3 .pricing-item .pricing-feature ul li:first-child, .rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul li:first-child {
+  margin-top: 0 !important;
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-feature ul li:last-child, .rs-pricing-switcher.style-3 .pricing-item .pricing-feature ul li:last-child, .rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul li:last-child {
+  margin-bottom: 0 !important;
+}
+.rs-pricing-switcher.style-4 .pricing-item.item-active, .rs-pricing-switcher.style-3 .pricing-item.item-active, .rs-pricing-switcher.style-1 .pricing-item.item-active {
+  background: var(--shadeColor);
+}
+.rs-pricing-switcher.style-4 .pricing-item.item-active::before, .rs-pricing-switcher.style-3 .pricing-item.item-active::before, .rs-pricing-switcher.style-1 .pricing-item.item-active::before {
+  border-top-color: var(--primaryColor);
+}
+.rs-pricing-switcher.style-2 .pricing-item {
+  background: var(--shadeColor);
+  padding: 60px;
+  border-radius: 20px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-item-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-item-inner .content-side {
+  position: relative;
+  width: 100%;
+  max-width: 30%;
+}
+.rs-pricing-switcher.style-2 .pricing-item .title-wrapper .title {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  line-height: 34px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .title-wrapper .intro-txt {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .price-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 5px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .price-wrapper .price {
+  color: var(--primaryColor);
+  font-weight: 700;
+  line-height: 1;
+  font-size: 40px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .price-wrapper .plan-duration {
+  font-size: 17px;
+  line-height: 27px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .price-description {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0 0 20px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature {
+  text-align: left;
+  width: 100%;
+  max-width: 58%;
+  padding: 50px 60px 38px;
+  background: #fff;
+  border-radius: 20px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature .feature-title {
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  line-height: 30px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature ul li {
+  position: relative;
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 600;
+  width: calc(50% - 25px);
+  color: var(--titleColor);
+  padding-right: 36px;
+  margin: 13px 0;
+  transition: all 0.5s ease;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature ul li:before {
+  content: "\eb7b";
+  color: var(--primaryColor);
+  font-size: 20px;
+  margin: 0;
+  font-weight: 900;
+  display: inline-block;
+  font-family: remixicon;
+  position: absolute;
+  left: 0;
+  transition: all 0.5s ease;
+  width: 26px;
+  height: 26px;
+  background-color: #d7e6ff;
+  text-align: center;
+  border-radius: 100px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature ul li.close {
+  color: var(--bodyColor);
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature ul li.close:before {
+  color: inherit;
+  content: "\eb97";
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-feature {
+  background: var(--primaryColor);
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-feature ul li {
+  color: #fff;
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-feature ul li:before {
+  color: inherit;
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-feature ul li.close {
+  color: rgba(255, 255, 255, 0.8);
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-feature ul li.close:before {
+  color: inherit;
+}
+.rs-pricing-switcher.style-2.btn-col-yes .pricing-item .content-side {
+  max-width: 28%;
+}
+.rs-pricing-switcher.style-2.btn-col-yes .pricing-item .pricing-feature {
+  max-width: 47%;
+}
+.rs-pricing-switcher.style-2.btn-col-yes .pricing-item .pricing-btn {
+  text-align: right;
+  width: 100%;
+  max-width: 20%;
+}
+.rs-pricing-switcher.style-4 .rs-pricing-switcher .pricing-item .pkg-icons {
+  background-color: transparent;
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-btn a:hover {
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-btn a:hover svg path {
+  fill: var(--titleColor);
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-btn a svg path {
+  fill: var(--titleColor);
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-feature ul li:before {
+  color: var(--primaryColor) !important;
+}
+.rs-pricing-switcher.style-4 .pricing-item {
+  background: var(--shadeColor);
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-feature ul li {
+  color: var(--titleColor);
+  padding-left: 0;
+  margin: 13px 0;
+  transition: all 0.5s ease;
+}
+.rs-pricing-switcher.style-4 .pricing-item .pricing-feature ul li:before {
+  color: var(--titleColor);
+}
+.rs-pricing-switcher.style-4 .pricing-item .content-wrapper {
+  padding: 30px;
+}
+.rs-pricing-switcher.corner-curve .pricing-item {
+  border: none;
+  z-index: 5;
+}
+.rs-pricing-switcher.corner-curve .pricing-item:after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #8a8585;
+  mask-size: 100px !important;
+  -webkit-mask-size: 100px !important;
+  mask-composite: exclude !important;
+  -webkit-mask-composite: exclude !important;
+  transition: all 0.5s ease, mask-size 0.2s ease !important;
+  z-index: -1;
+}
+.rs-pricing-switcher.corner-curve .pricing-item:hover:after {
+  mask-size: 105px !important;
+  -webkit-mask-size: 105px !important;
+}
+.rs-pricing-switcher.corner-curve.curve-position-top-left .pricing-item:after {
+  mask: url("../../assets/img/corner-curve-2-top-left.svg") center/contain no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask: url("../../assets/img/corner-curve-2-top-left.svg") center/contain no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask-position: -1px 0px;
+  mask-position: -1px 0px;
+}
+.rs-pricing-switcher.corner-curve.curve-position-top-right .pricing-item:after {
+  mask: url("../../assets/img/corner-curve-2-top-right.svg") center/contain no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask: url("../../assets/img/corner-curve-2-top-right.svg") center/contain no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask-position: calc(100% + 1px) 0px;
+  mask-position: calc(100% + 1px) 0px;
+}
+.rs-pricing-switcher.corner-curve.curve-position-bottom-left .pricing-item:after {
+  mask: url("../../assets/img/corner-curve-2-bottom-left.svg") center/contain no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask: url("../../assets/img/corner-curve-2-bottom-left.svg") center/contain no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask-position: -1px calc(100% + 1px);
+  mask-position: -1px calc(100% + 1px);
+}
+.rs-pricing-switcher.corner-curve.curve-position-bottom-right .pricing-item:after {
+  mask: url("../../assets/img/corner-curve-2-bottom-right.svg") center/contain no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask: url("../../assets/img/corner-curve-2-bottom-right.svg") center/contain no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask-position: calc(100% + 1px) calc(100% + 1px);
+  mask-position: calc(100% + 1px) calc(100% + 1px);
+}
+.rs-pricing-switcher.cut-style .pricing-item {
+  overflow: hidden;
+  --dot-x-offset: 13px;
+}
+.rs-pricing-switcher.cut-style .pricing-item:after, .rs-pricing-switcher.cut-style .pricing-item:before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  background: #fff;
+  top: 184px;
+  width: 26px;
+  height: 34px;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.05);
+}
+.rs-pricing-switcher.cut-style .pricing-item:before {
+  left: calc(-1 * var(--dot-x-offset));
+}
+.rs-pricing-switcher.cut-style .pricing-item:after {
+  right: calc(-1 * var(--dot-x-offset));
+}
+.rs-pricing-switcher.cut-style .row > div:nth-child(2) {
+  z-index: 1;
+}
+
+.rs-price-table-menu ul {
+  margin: 0;
+  list-style: none;
+}
+.rs-price-table-menu li {
+  list-style: none;
+}
+.rs-price-table-menu .rs-pricing-table-body h3.rs-pricing-menu-features-title {
+  margin-bottom: 0px;
+}
+.rs-price-table-menu .rs-pricing-table-body .full-menu-item .price-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+.rs-price-table-menu .rs-pricing-table-body .full-menu-item .price-menu .rs-pricing-menu-image {
+  margin-right: 10px;
+  flex-grow: 0;
+  width: 80px;
+}
+.rs-price-table-menu .rs-pricing-table-body .full-menu-item .price-menu .rs-pricing-table-feature-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.rs-price-table-menu .rs-pricing-table-body .full-menu-item .price-menu .rs-pricing-table-feature-text span.rs-price-title-connector {
+  border-bottom: 1px dashed #ccc;
+  height: 1px;
+  flex-grow: 1;
+  align-self: center;
+  margin: 0 20px;
+}
+.rs-price-table-menu .rs-pricing-table-body .full-menu-item .price-menu .rs-pricing-table-feature-text span {
+  align-self: center;
+}
+.rs-price-table-menu .rs-pricing-table-body .full-menu-item .price-menu .menu-price {
+  display: inline-table;
+  align-self: center;
+}
+
+div.swiper-container.rs-pricing-slider {
+  position: relative;
+  right: -150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: -88px;
+  margin-bottom: -88px;
+  padding-left: 20px;
+}
+div.swiper-container.rs-pricing-slider ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+div.swiper-container.rs-pricing-slider .swiper-wrapper {
+  align-items: center;
+}
+div.swiper-container.rs-pricing-slider .swiper-wrapper .swiper-slide .test-it {
+  border-radius: 40px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: -2;
+  background: transparent;
+  overflow: hidden;
+}
+div.swiper-container.rs-pricing-slider .swiper-wrapper .swiper-slide .test-it img {
+  width: 100%;
+  height: 100%;
+}
+div.swiper-container.rs-pricing-slider .swiper-wrapper .swiper-slide .test-it .priceing-wrap {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+div.swiper-container.rs-pricing-slider .swiper-wrapper .swiper-slide .test-it .priceing-wrap .top-part i {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  line-height: 60px;
+  display: block;
+  margin: 0 auto 25px;
+  background: #2b59ff;
+  font-size: 28px;
+}
+div.swiper-container.rs-pricing-slider .swiper-wrapper .swiper-slide .test-it .priceing-wrap .top-part .title {
+  margin-bottom: 7px;
+  font-size: 22px;
+  color: #ffffff;
+}
+div.swiper-container.rs-pricing-slider .swiper-wrapper .swiper-slide .test-it .priceing-wrap .top-part .price {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+div.swiper-container.rs-pricing-slider .swiper-wrapper .swiper-slide .test-it .priceing-wrap ul.info li {
+  font-size: 13px;
+}
+div.swiper-container.rs-pricing-slider .swiper-wrapper .swiper-slide .test-it .priceing-wrap .btn-part {
+  display: none;
+}
+div.swiper-container.rs-pricing-slider .swiper-wrapper .swiper-slide .test-it .priceing-wrap .btn-part .readon {
+  padding: 8px 33px;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide {
+  opacity: 0;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide .test-it {
+  width: 100%;
+  max-width: 85% !important;
+  left: -85px;
+  height: 395px;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-prev .test-it {
+  width: 140%;
+  max-width: 140% !important;
+  left: 0 !important;
+  z-index: 2 !important;
+  height: 690px !important;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-prev .test-it .top-part i {
+  display: block !important;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-prev .test-it .top-part .title {
+  font-size: 25px !important;
+  margin-bottom: 32px !important;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-prev .test-it .top-part .price {
+  font-size: 35px !important;
+  color: #2b59ff !important;
+  margin-bottom: 30px !important;
+  font-weight: 600 !important;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-prev .test-it ul.info li {
+  font-size: 16px !important;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-prev .test-it .btn-part {
+  display: block !important;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-prev .test-it:before {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  z-index: 0;
+  width: 22px;
+  height: 22px;
+  right: 80px;
+  top: 80px;
+  background: #91a9ff;
+  opacity: 0.26;
+  animation: move-x2 5s alternate infinite;
+  -webkit-animation: move-x2 5s alternate infinite;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-prev .test-it:after {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  z-index: 0;
+  width: 40px;
+  height: 40px;
+  left: 80px;
+  bottom: 80px;
+  background: #2b59ff;
+  opacity: 0.26;
+  animation: move-x 2s alternate infinite;
+  -webkit-animation: move-x 2s alternate infinite;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-prev {
+  opacity: 1;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-active .test-it {
+  width: 120%;
+  max-width: 120% !important;
+  left: 0 !important;
+  z-index: 1 !important;
+  height: 520px !important;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-active {
+  opacity: 1;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-next .test-it {
+  width: 100%;
+  max-width: 100% !important;
+  left: -45px !important;
+  z-index: -1 !important;
+  height: 450px !important;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-next .test-it .top-part i {
+  display: block !important;
+}
+div.swiper-container.rs-pricing-slider .swiper-slide-next {
+  opacity: 1;
+}
+div.swiper-container.rs-pricing-slider .swiper-next {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #ffffff;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 20px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+  z-index: 3;
+  left: 52%;
+}
+div.swiper-container.rs-pricing-slider .swiper-next:after {
+  font-family: Flaticon;
+  color: #2b59ff;
+  transition: all 0.4s ease 0s;
+  content: "\f111";
+}
+div.swiper-container.rs-pricing-slider .swiper-next:hover {
+  background: #2b59ff;
+}
+div.swiper-container.rs-pricing-slider .swiper-next:hover:after {
+  color: #ffffff;
+}
+div.swiper-container.rs-pricing-slider .swiper-prev {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #ffffff;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 20px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+  z-index: 3;
+  left: 59%;
+}
+div.swiper-container.rs-pricing-slider .swiper-prev:after {
+  font-family: Flaticon;
+  color: #2b59ff;
+  transition: all 0.4s ease 0s;
+  content: "\f110";
+}
+div.swiper-container.rs-pricing-slider .swiper-prev:hover {
+  background: #2b59ff;
+}
+div.swiper-container.rs-pricing-slider .swiper-prev:hover:after {
+  color: #ffffff;
+}
+div.swiper-container.rs-pricing-slider .pattern {
+  position: absolute;
+  left: 80px;
+  top: 80px;
+  pointer-events: none;
+}
+
+.rs-price-table .rs-pricing-table-features-list {
+  margin-left: 0;
+  list-style: none;
+}
+.rs-price-table .btn-part.btn-gradient-color .rs-pricing-table-btn {
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.rs-price-table .btn-part.btn-gradient-color .rs-pricing-table-btn:hover {
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.rs-price-table .btn-part.btn-arrow-rotate:hover svg,
+.rs-price-table .btn-part.btn-arrow-rotate .rs-pricing-table-btn svg {
+  transform: rotate(-45deg);
+}
+.rs-price-table.style-3, .rs-price-table.style-1 {
+  position: relative;
+}
+.rs-price-table.style-3 .rs-pricing-table-price-text, .rs-price-table.style-1 .rs-pricing-table-price-text {
+  color: var(--primaryColor);
+}
+.rs-price-table.style-3 .short-desc, .rs-price-table.style-1 .short-desc {
+  border-color: var(--primaryColor);
+}
+.rs-price-table.style-3 .rs-pricing-table-features-list li svg path, .rs-price-table.style-1 .rs-pricing-table-features-list li svg path {
+  fill: var(--primaryColor);
+}
+.rs-price-table.style-3 .rs-pricing-table-btn, .rs-price-table.style-1 .rs-pricing-table-btn {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+.rs-price-table.style-3 .rs-pricing-table-btn:hover, .rs-price-table.style-1 .rs-pricing-table-btn:hover {
+  background: var(--whiteColor);
+  color: var(--titleColor);
+}
+.rs-price-table.style-3:after, .rs-price-table.style-1:after {
+  position: absolute;
+  content: "";
+  right: 20px;
+  left: 20px;
+  top: 20px;
+  bottom: 20px;
+  background: transparent;
+  border: 1px dashed var(--primaryColor);
+  pointer-events: none;
+}
+.rs-price-table.style-3 > *, .rs-price-table.style-1 > * {
+  position: relative;
+  z-index: 1;
+}
+.rs-price-table.style-3 .rs-pricing-table-badge, .rs-price-table.style-1 .rs-pricing-table-badge {
+  position: absolute;
+  top: 0;
+  padding: 10px 10px;
+  background-color: #010d14;
+  color: #fff;
+  line-height: 1;
+  z-index: 1;
+}
+.rs-price-table.style-3 .rs-pricing-table-title, .rs-price-table.style-1 .rs-pricing-table-title {
+  padding-top: 10px;
+  margin-bottom: 20px;
+  color: #121933;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+.rs-price-table.style-3 .rs-pricing-table-price, .rs-price-table.style-1 .rs-pricing-table-price {
+  margin-bottom: 30px;
+}
+.rs-price-table.style-3 .rs-pricing-table-price .rs-pricing-table-price-tag, .rs-price-table.style-1 .rs-pricing-table-price .rs-pricing-table-price-tag {
+  margin-bottom: 0.5rem;
+  color: var(--primaryColor);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: normal;
+  position: relative;
+}
+.rs-price-table.style-3 .rs-pricing-table-price .rs-pricing-table-price-tag span.watermark, .rs-price-table.style-1 .rs-pricing-table-price .rs-pricing-table-price-tag span.watermark {
+  position: absolute;
+  font-size: 60px;
+  line-height: 60px;
+  text-transform: capitalize;
+  font-weight: 800;
+  opacity: 0.06;
+  top: 6%;
+  transform: translateY(-50%);
+  width: 100%;
+  left: 0;
+  color: inherit;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 3px transparent;
+  background-size: cover;
+  color: #fff;
+}
+.rs-price-table.style-3 .rs-pricing-table-price .rs-pricing-table-period, .rs-price-table.style-1 .rs-pricing-table-price .rs-pricing-table-period {
+  display: block;
+}
+.rs-price-table.style-3 .rs-pricing-table-price.display-inline2 .rs-pricing-table-price-tag, .rs-price-table.style-1 .rs-pricing-table-price.display-inline2 .rs-pricing-table-price-tag {
+  line-height: 0.66;
+  display: flex;
+  justify-content: center;
+}
+.rs-price-table.style-3 .rs-pricing-table-price.display-inline2 .rs-pricing-table-period, .rs-price-table.style-1 .rs-pricing-table-price.display-inline2 .rs-pricing-table-period {
+  display: flex;
+  align-items: flex-end;
+}
+.rs-price-table.style-3 .rs-pricing-table-price.display-inline .rs-pricing-table-period, .rs-price-table.style-1 .rs-pricing-table-price.display-inline .rs-pricing-table-period {
+  position: relative;
+  padding-left: 20px;
+  display: inline-block;
+}
+.rs-price-table.style-3 .rs-pricing-table-price.display-inline .rs-pricing-table-period:before, .rs-price-table.style-1 .rs-pricing-table-price.display-inline .rs-pricing-table-period:before {
+  content: "";
+  height: 20px;
+  width: 2px;
+  position: absolute;
+  left: 0;
+  transform: rotate(20deg) translateY(-50%);
+  top: 50%;
+  background: #f2f2f2;
+}
+.rs-price-table.style-3 .short-desc, .rs-price-table.style-1 .short-desc {
+  position: relative;
+}
+.rs-price-table.style-3 .short-desc::after, .rs-price-table.style-1 .short-desc::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  bottom: -10px;
+  background: #ece9e8;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.rs-price-table.style-3 .short-desc::before, .rs-price-table.style-1 .short-desc::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  left: -10px;
+  bottom: -10px;
+  background: #ece9e8;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.rs-price-table.style-3 .rs-pricing-table-body, .rs-price-table.style-1 .rs-pricing-table-body {
+  margin-bottom: 24px;
+}
+.rs-price-table.style-3 .rs-pricing-table-body .rs-pricing-table-features-title, .rs-price-table.style-1 .rs-pricing-table-body .rs-pricing-table-features-title {
+  margin-top: 62px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 16px;
+}
+.rs-price-table.style-3 .rs-pricing-table-body .rs-pricing-table-features-list, .rs-price-table.style-1 .rs-pricing-table-body .rs-pricing-table-features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.rs-price-table.style-3 .rs-pricing-table-body .rs-pricing-table-features-list li, .rs-price-table.style-1 .rs-pricing-table-body .rs-pricing-table-features-list li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.rs-price-table.style-3 .rs-pricing-table-body .rs-pricing-table-features-list li:last-child, .rs-price-table.style-1 .rs-pricing-table-body .rs-pricing-table-features-list li:last-child {
+  border: none !important;
+}
+.rs-price-table.style-3 .rs-pricing-table-body .rs-pricing-table-features-list li i, .rs-price-table.style-1 .rs-pricing-table-body .rs-pricing-table-features-list li i {
+  margin-right: 10px;
+  min-width: 15px;
+  font-size: 16px;
+}
+.rs-price-table.style-3 .rs-pricing-table-body .rs-pricing-table-features-list li svg, .rs-price-table.style-1 .rs-pricing-table-body .rs-pricing-table-features-list li svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.rs-price-table.style-3 .rs-pricing-table-body .rs-pricing-table-features-list.right_position li, .rs-price-table.style-1 .rs-pricing-table-body .rs-pricing-table-features-list.right_position li {
+  overflow: hidden;
+}
+.rs-price-table.style-3 .rs-pricing-table-body .rs-pricing-table-features-list.right_position li i, .rs-price-table.style-1 .rs-pricing-table-body .rs-pricing-table-features-list.right_position li i {
+  float: right;
+  margin-right: 0;
+}
+.rs-price-table.style-3 .rs-pricing-table-btn, .rs-price-table.style-1 .rs-pricing-table-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 2px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+.rs-price-table.style-3 .rs-pricing-table-btn svg,
+.rs-price-table.style-3 .rs-pricing-table-btn i, .rs-price-table.style-1 .rs-pricing-table-btn svg,
+.rs-price-table.style-1 .rs-pricing-table-btn i {
+  transition: var(--transition);
+  position: relative;
+  margin-left: 5px;
+  transform: translateX(0px);
+}
+.rs-price-table.style-3 .rs-pricing-table-btn:hover svg,
+.rs-price-table.style-3 .rs-pricing-table-btn:hover i, .rs-price-table.style-1 .rs-pricing-table-btn:hover svg,
+.rs-price-table.style-1 .rs-pricing-table-btn:hover i {
+  transform: translateX(3px);
+}
+.rs-price-table.style-3 .rs-pricing-icon, .rs-price-table.style-1 .rs-pricing-icon {
+  position: relative;
+}
+.rs-price-table.style-3 .rs-pricing-icon i, .rs-price-table.style-1 .rs-pricing-icon i {
+  position: relative;
+  transition: all 0.4s ease 0s;
+  text-align: center;
+}
+.rs-price-table.style-3 .btn-bottom-text p, .rs-price-table.style-1 .btn-bottom-text p {
+  color: var(--primaryColor);
+}
+.rs-price-table.style-3 .line-through .rs-pricing-table-feature-text, .rs-price-table.style-1 .line-through .rs-pricing-table-feature-text {
+  text-decoration: line-through;
+}
+.rs-price-table.style-3 .rs-pricing-table-price .rs-pricing-table-price-tag.price-gradient-color .rs-pricing-table-price-text,
+.rs-price-table.style-3 .rs-pricing-table-price .rs-pricing-table-price-tag.price-gradient-color .rs-pricing-table-currency, .rs-price-table.style-1 .rs-pricing-table-price .rs-pricing-table-price-tag.price-gradient-color .rs-pricing-table-price-text,
+.rs-price-table.style-1 .rs-pricing-table-price .rs-pricing-table-price-tag.price-gradient-color .rs-pricing-table-currency {
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.rs-price-table.style-3 .rs-pricing-table-body .rs-pricing-table-features-list.feature_icon_gradient_color li i, .rs-price-table.style-1 .rs-pricing-table-body .rs-pricing-table-features-list.feature_icon_gradient_color li i {
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.rs-price-table.style-2 {
+  background-color: var(--primaryColor);
+}
+.rs-price-table.style-2 .rs-pricing-table-header:after {
+  background: var(--primaryColor);
+}
+.rs-price-table.style-2 .rs-pricing-table-title,
+.rs-price-table.style-2 .rs-pricing-table-price-text,
+.rs-price-table.style-2 .rs-pricing-table-currency,
+.rs-price-table.style-2 .rs-pricing-table-features-title,
+.rs-price-table.style-2 .rs-pricing-table-features-list li,
+.rs-price-table.style-2 .rs-pricing-table-features-title {
+  color: var(--whiteColor);
+}
+.rs-price-table.style-2 .rs-pricing-table-btn {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+.rs-price-table.style-2 .rs-pricing-table-btn:hover {
+  color: var(--titleColor);
+  background: var(--whiteColor);
+}
+.rs-price-table.style-2 {
+  padding: 30px;
+  border-radius: 4px;
+  text-align: center;
+}
+.rs-price-table.style-2 .rs-pricing-table-header {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.rs-price-table.style-2 .rs-pricing-table-header > * {
+  position: relative;
+  z-index: 1;
+}
+.rs-price-table.style-2 .rs-pricing-table-header:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.9;
+}
+.rs-price-table.style-2 .rs-pricing-table-title {
+  margin-bottom: 10px;
+}
+.rs-price-table.style-2 .rs-pricing-table-features-title {
+  margin-bottom: 40px;
+}
+.rs-price-table.style-2 .rs-pricing-table-body {
+  margin-bottom: 50px;
+}
+.rs-price-table.style-2 .rs-pricing-table-features-list {
+  margin-bottom: 0;
+}
+.rs-price-table.style-2 .rs-pricing-table-features-list > li {
+  margin-bottom: 10px;
+}
+.rs-price-table.style-2 .rs-pricing-table-features-list > li:first-child {
+  margin-top: 0 !important;
+}
+.rs-price-table.style-2 .rs-pricing-table-features-list > li:last-child {
+  margin-bottom: 0 !important;
+}
+.rs-price-table.style-2 .rs-pricing-table-btn {
+  padding: 11px 30px;
+  border-radius: 4px;
+}
+
+.rs-price-table.style-4 {
+  position: relative;
+}
+.rs-price-table.style-4 .rs-pricing-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rs-price-table.style-4 .rs-pricing-table-features-list {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+}
+.rs-price-table.style-4 .rs-pricing-table-features-list li {
+  flex: 0 0 50%;
+}
+.rs-price-table.style-4 .pricing-svg {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+.rs-price-table.style-4 .pricing-svg svg {
+  transition: var(--transition);
+}
+
+.rs-pricing-table-btn:hover svg {
+  transition: var(--transition);
+}
+
+.rs-pricing-table-btn:hover svg path {
+  transition: var(--transition);
+}
