@@ -227,7 +227,7 @@ const TECHZEN_HEADER = `
 									data-widget_type="rstb-site-logo.default">
 									<div class="rstb-site-logo">
 										<a href="/index.html"><img
-												src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/logos_001.png"
+												src="../images/logos_001.png"
 												alt="IT Solutions"></a>
 									</div>
 								</div>
@@ -298,7 +298,7 @@ const TECHZEN_HEADER = `
 													</svg>
 												</button>
 												<div class="mobile-panel-logo"><img
-														src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/logos_002.png"
+														src="../images/logos_002.png"
 														title="logos_002" alt="logos_002" loading="lazy" /></div>
 												<ul id="menu-mobile-menu" class="mobile-menu has-vertical-divider">
 													<li id="menu-item-4916"
@@ -350,7 +350,7 @@ const TECHZEN_HEADER = `
 
 
 											<a class="rs-btn anim-dir-angle "
-												href="https://techzenwp.rstheme.com/it-solutions/appointment/">
+												href="#">
 												<span class="rs-btn-active"><span>Get Free Quote</span> </span>
 												<em>
 													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
@@ -402,7 +402,7 @@ const TECHZEN_HEADER = `
 										</button>
 										<div class="search-form-area">
 											<form role="search" method="get"
-												action="https://techzenwp.rstheme.com/it-solutions/">
+												action="#">
 												<input type="search" class="search-field" placeholder="Search..."
 													value="" name="s" />
 												<button type="submit" class="submit-btn">
@@ -467,7 +467,7 @@ const TECHZEN_HEADER = `
 															data-widget_type="rstb-site-logo.default">
 															<div class="rstb-site-logo">
 																<a href="/index.html"><img
-																		src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/logos_002.png"
+																		src="../images/logos_002.png"
 																		alt="IT Solutions"></a>
 															</div>
 														</div>
@@ -500,12 +500,12 @@ const TECHZEN_HEADER = `
 																				data-elementor-lightbox-slideshow="41ed0909"
 																				data-elementor-lightbox-title="blog_06"
 																				data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTEzMSwidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDYuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																				href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_06.jpg'><img
+																				href='../images/blog_06.jpg'><img
 																					width="150" height="150"
-																					src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_06-150x150.jpg"
+																					src="../images/blog_06.jpg"
 																					class="attachment-thumbnail size-thumbnail"
 																					alt="" decoding="async"
-																					srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_06-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_06-500x500.jpg 500w"
+																					srcset="../images/blog_06.jpg 150w, ../images/blog_06-500x500.jpg 500w"
 																					sizes="(max-width: 150px) 100vw, 150px" /></a>
 																		</div>
 																	</figure>
@@ -515,12 +515,12 @@ const TECHZEN_HEADER = `
 																				data-elementor-lightbox-slideshow="41ed0909"
 																				data-elementor-lightbox-title="blog_05"
 																				data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTEyOCwidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDUuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																				href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_05.jpg'><img
+																				href='../images/blog_05.jpg'><img
 																					width="150" height="150"
-																					src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_05-150x150.jpg"
+																					src="../images/blog_05.jpg"
 																					class="attachment-thumbnail size-thumbnail"
 																					alt="" decoding="async"
-																					srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_05-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_05-500x500.jpg 500w"
+																					srcset="../images/blog_05.jpg 150w, ../images/blog_05-500x500.jpg 500w"
 																					sizes="(max-width: 150px) 100vw, 150px" /></a>
 																		</div>
 																	</figure>
@@ -530,12 +530,12 @@ const TECHZEN_HEADER = `
 																				data-elementor-lightbox-slideshow="41ed0909"
 																				data-elementor-lightbox-title="blog_04"
 																				data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTEyMywidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDQuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																				href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_04.jpg'><img
+																				href='../images/blog_04.jpg'><img
 																					width="150" height="150"
-																					src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_04-150x150.jpg"
+																					src="../images/blog_04.jpg"
 																					class="attachment-thumbnail size-thumbnail"
 																					alt="" decoding="async"
-																					srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_04-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_04-500x500.jpg 500w"
+																					srcset="../images/blog_04.jpg 150w, ../images/blog_04-500x500.jpg 500w"
 																					sizes="(max-width: 150px) 100vw, 150px" /></a>
 																		</div>
 																	</figure>
@@ -545,13 +545,13 @@ const TECHZEN_HEADER = `
 																				data-elementor-lightbox-slideshow="41ed0909"
 																				data-elementor-lightbox-title="blog_03"
 																				data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTEyMCwidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDMuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																				href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_03.jpg'><img
+																				href='../images/blog_03.jpg'><img
 																					loading="lazy" width="150"
 																					height="150"
-																					src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_03-150x150.jpg"
+																					src="../images/blog_03.jpg"
 																					class="attachment-thumbnail size-thumbnail"
 																					alt="" decoding="async"
-																					srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_03-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_03-500x500.jpg 500w"
+																					srcset="../images/blog_03.jpg 150w, ../images/blog_03-500x500.jpg 500w"
 																					sizes="(max-width: 150px) 100vw, 150px" /></a>
 																		</div>
 																	</figure>
@@ -561,13 +561,13 @@ const TECHZEN_HEADER = `
 																				data-elementor-lightbox-slideshow="41ed0909"
 																				data-elementor-lightbox-title="blog_02"
 																				data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTExNiwidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDIuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																				href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_02.jpg'><img
+																				href='../images/blog_02.jpg'><img
 																					loading="lazy" width="150"
 																					height="150"
-																					src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_02-150x150.jpg"
+																					src="../images/blog_02.jpg"
 																					class="attachment-thumbnail size-thumbnail"
 																					alt="" decoding="async"
-																					srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_02-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_02-500x500.jpg 500w"
+																					srcset="../images/blog_02.jpg 150w, ../images/blog_02-500x500.jpg 500w"
 																					sizes="(max-width: 150px) 100vw, 150px" /></a>
 																		</div>
 																	</figure>
@@ -577,13 +577,13 @@ const TECHZEN_HEADER = `
 																				data-elementor-lightbox-slideshow="41ed0909"
 																				data-elementor-lightbox-title="blog_01"
 																				data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTA5NSwidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDEuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																				href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_01.jpg'><img
+																				href='../images/blog_01.jpg'><img
 																					loading="lazy" width="150"
 																					height="150"
-																					src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_01-150x150.jpg"
+																					src="../images/blog_01.jpg"
 																					class="attachment-thumbnail size-thumbnail"
 																					alt="" decoding="async"
-																					srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_01-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_01-500x500.jpg 500w"
+																					srcset="../images/blog_01.jpg 150w, ../images/blog_01-500x500.jpg 500w"
 																					sizes="(max-width: 150px) 100vw, 150px" /></a>
 																		</div>
 																	</figure>
@@ -773,7 +773,7 @@ const TECHZEN_HEADER = `
 								data-widget_type="rstb-site-logo.default">
 								<div class="rstb-site-logo">
 									<a href="/index.html"><img
-											src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/logos_001.png"
+											src="../images/logos_001.png"
 											alt="IT Solutions"></a>
 								</div>
 							</div>
@@ -844,7 +844,7 @@ const TECHZEN_HEADER = `
 												</svg>
 											</button>
 											<div class="mobile-panel-logo"><img
-													src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/logos_002.png"
+													src="../images/logos_002.png"
 													title="logos_002" alt="logos_002" loading="lazy" /></div>
 											<ul id="menu-mobile-menu-1" class="mobile-menu has-vertical-divider">
 												<li
@@ -896,7 +896,7 @@ const TECHZEN_HEADER = `
 
 
 										<a class="rs-btn anim-dir-angle "
-											href="https://techzenwp.rstheme.com/it-solutions/appointment/">
+											href="#">
 											<span class="rs-btn-active"><span>Get Free Quote</span> </span>
 											<em>
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
@@ -947,7 +947,7 @@ const TECHZEN_HEADER = `
 									</button>
 									<div class="search-form-area">
 										<form role="search" method="get"
-											action="https://techzenwp.rstheme.com/it-solutions/">
+											action="#">
 											<input type="search" class="search-field" placeholder="Search..." value=""
 												name="s" />
 											<button type="submit" class="submit-btn">
@@ -1010,7 +1010,7 @@ const TECHZEN_HEADER = `
 														data-e-type="widget" data-widget_type="rstb-site-logo.default">
 														<div class="rstb-site-logo">
 															<a href="/index.html"><img
-																	src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/logos_002.png"
+																	src="../images/logos_002.png"
 																	alt="IT Solutions"></a>
 														</div>
 													</div>
@@ -1042,12 +1042,12 @@ const TECHZEN_HEADER = `
 																			data-elementor-lightbox-slideshow="41ed0909"
 																			data-elementor-lightbox-title="blog_06"
 																			data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTEzMSwidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDYuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																			href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_06.jpg'><img
+																			href='../images/blog_06.jpg'><img
 																				width="150" height="150"
-																				src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_06-150x150.jpg"
+																				src="../images/blog_06.jpg"
 																				class="attachment-thumbnail size-thumbnail"
 																				alt="" decoding="async"
-																				srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_06-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_06-500x500.jpg 500w"
+																				srcset="../images/blog_06.jpg 150w, ../images/blog_06-500x500.jpg 500w"
 																				sizes="(max-width: 150px) 100vw, 150px" /></a>
 																	</div>
 																</figure>
@@ -1057,12 +1057,12 @@ const TECHZEN_HEADER = `
 																			data-elementor-lightbox-slideshow="41ed0909"
 																			data-elementor-lightbox-title="blog_05"
 																			data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTEyOCwidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDUuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																			href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_05.jpg'><img
+																			href='../images/blog_05.jpg'><img
 																				width="150" height="150"
-																				src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_05-150x150.jpg"
+																				src="../images/blog_05.jpg"
 																				class="attachment-thumbnail size-thumbnail"
 																				alt="" decoding="async"
-																				srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_05-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_05-500x500.jpg 500w"
+																				srcset="../images/blog_05.jpg 150w, ../images/blog_05-500x500.jpg 500w"
 																				sizes="(max-width: 150px) 100vw, 150px" /></a>
 																	</div>
 																</figure>
@@ -1072,12 +1072,12 @@ const TECHZEN_HEADER = `
 																			data-elementor-lightbox-slideshow="41ed0909"
 																			data-elementor-lightbox-title="blog_04"
 																			data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTEyMywidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDQuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																			href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_04.jpg'><img
+																			href='../images/blog_04.jpg'><img
 																				width="150" height="150"
-																				src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_04-150x150.jpg"
+																				src="../images/blog_04.jpg"
 																				class="attachment-thumbnail size-thumbnail"
 																				alt="" decoding="async"
-																				srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_04-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_04-500x500.jpg 500w"
+																				srcset="../images/blog_04.jpg 150w, ../images/blog_04-500x500.jpg 500w"
 																				sizes="(max-width: 150px) 100vw, 150px" /></a>
 																	</div>
 																</figure>
@@ -1087,12 +1087,12 @@ const TECHZEN_HEADER = `
 																			data-elementor-lightbox-slideshow="41ed0909"
 																			data-elementor-lightbox-title="blog_03"
 																			data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTEyMCwidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDMuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																			href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_03.jpg'><img
+																			href='../images/blog_03.jpg'><img
 																				loading="lazy" width="150" height="150"
-																				src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_03-150x150.jpg"
+																				src="../images/blog_03.jpg"
 																				class="attachment-thumbnail size-thumbnail"
 																				alt="" decoding="async"
-																				srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_03-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_03-500x500.jpg 500w"
+																				srcset="../images/blog_03.jpg 150w, ../images/blog_03-500x500.jpg 500w"
 																				sizes="(max-width: 150px) 100vw, 150px" /></a>
 																	</div>
 																</figure>
@@ -1102,12 +1102,12 @@ const TECHZEN_HEADER = `
 																			data-elementor-lightbox-slideshow="41ed0909"
 																			data-elementor-lightbox-title="blog_02"
 																			data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTExNiwidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDIuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																			href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_02.jpg'><img
+																			href='../images/blog_02.jpg'><img
 																				loading="lazy" width="150" height="150"
-																				src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_02-150x150.jpg"
+																				src="../images/blog_02.jpg"
 																				class="attachment-thumbnail size-thumbnail"
 																				alt="" decoding="async"
-																				srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_02-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_02-500x500.jpg 500w"
+																				srcset="../images/blog_02.jpg 150w, ../images/blog_02-500x500.jpg 500w"
 																				sizes="(max-width: 150px) 100vw, 150px" /></a>
 																	</div>
 																</figure>
@@ -1117,12 +1117,12 @@ const TECHZEN_HEADER = `
 																			data-elementor-lightbox-slideshow="41ed0909"
 																			data-elementor-lightbox-title="blog_01"
 																			data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTA5NSwidXJsIjoiaHR0cHM6XC9cL3RlY2h6ZW53cC5yc3RoZW1lLmNvbVwvaXQtc29sdXRpb25zXC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvMlwvMjAyNlwvMDRcL2Jsb2dfMDEuanBnIiwic2xpZGVzaG93IjoiNDFlZDA5MDkifQ%3D%3D"
-																			href='https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_01.jpg'><img
+																			href='../images/blog_01.jpg'><img
 																				loading="lazy" width="150" height="150"
-																				src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_01-150x150.jpg"
+																				src="../images/blog_01.jpg"
 																				class="attachment-thumbnail size-thumbnail"
 																				alt="" decoding="async"
-																				srcset="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_01-150x150.jpg 150w, https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/blog_01-500x500.jpg 500w"
+																				srcset="../images/blog_01.jpg 150w, ../images/blog_01-500x500.jpg 500w"
 																				sizes="(max-width: 150px) 100vw, 150px" /></a>
 																	</div>
 																</figure>
@@ -1315,7 +1315,7 @@ const TECHZEN_FOOTER = `
 										data-widget_type="rstb-site-logo.default">
 										<div class="rstb-site-logo">
 											<a href="/index.html"><img
-													src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/logos_002.png"
+													src="../images/logos_002.png"
 													alt="IT Solutions"></a>
 										</div>
 									</div>
@@ -1648,7 +1648,7 @@ const TECHZEN_FOOTER = `
 														</li>
 														<li id="menu-item-1754"
 															class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1754">
-															<a href="https://techzenwp.rstheme.com/it-solutions/service/cybersecurity-services/"
+															<a href="#"
 																class="menu-item-link"><span
 																	class="menu-prefix-icon"><svg
 																		xmlns="http://www.w3.org/2000/svg"
@@ -1662,7 +1662,7 @@ const TECHZEN_FOOTER = `
 														</li>
 														<li id="menu-item-1753"
 															class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1753">
-															<a href="https://techzenwp.rstheme.com/it-solutions/service/web-development/"
+															<a href="#"
 																class="menu-item-link"><span
 																	class="menu-prefix-icon"><svg
 																		xmlns="http://www.w3.org/2000/svg"
@@ -1675,7 +1675,7 @@ const TECHZEN_FOOTER = `
 														</li>
 														<li id="menu-item-1755"
 															class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1755">
-															<a href="https://techzenwp.rstheme.com/it-solutions/service/cloud-solutions/"
+															<a href="#"
 																class="menu-item-link"><span
 																	class="menu-prefix-icon"><svg
 																		xmlns="http://www.w3.org/2000/svg"
@@ -1772,7 +1772,7 @@ const TECHZEN_FOOTER = `
 																class="logo-item col-xl-3 col-lg-4 col-md-4 col-sm-4 col-4">
 																<a href="#" class="logo-item-wrapper">
 																	<div class="image-wrapper">
-																		<img src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/footer-logo.png"
+																		<img src="../images/footer-logo.png"
 																			alt="footer-logo.png">
 																	</div>
 																</a>
@@ -1781,7 +1781,7 @@ const TECHZEN_FOOTER = `
 																class="logo-item col-xl-3 col-lg-4 col-md-4 col-sm-4 col-4">
 																<a href="#" class="logo-item-wrapper">
 																	<div class="image-wrapper">
-																		<img src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/brand-logo1-1.png"
+																		<img src="../images/brand-logo1-1.png"
 																			alt="brand-logo1-1.png">
 																	</div>
 																</a>
@@ -1790,7 +1790,7 @@ const TECHZEN_FOOTER = `
 																class="logo-item col-xl-3 col-lg-4 col-md-4 col-sm-4 col-4">
 																<a href="#" class="logo-item-wrapper">
 																	<div class="image-wrapper">
-																		<img src="https://techzenwp.rstheme.com/it-solutions/wp-content/uploads/sites/2/2026/04/brand-logo1-2.png"
+																		<img src="../images/brand-logo1-2.png"
 																			alt="brand-logo1-2.png">
 																	</div>
 																</a>
